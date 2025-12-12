@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Innovator — AI Automation for Business</title>
+  <meta name="description" content="AI Innovator — AI-powered automation for WhatsApp, Instagram & CRM. Grow globally." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#071018; --card:#0b1216; --muted:#9aa6af; --accent:#06b6d4; --gold:#f6b93b; --white:#f8fafc;
+      --radius:18px; --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;color:var(--white);background:linear-gradient(180deg,#041019 0%, #07182a 100%);}
+    .container{max-width:1100px;margin:28px auto;padding:20px;}
+    header{display:flex;align-items:center;gap:18px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#06b6d4,#2dd4bf);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021;box-shadow:0 6px 20px rgba(3,6,10,0.6)}
+    .brand h1{font-size:16px;margin:0}
+    nav{display:flex;gap:12px;align-items:center}
+    .nav-btn{padding:10px 16px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--white);font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--accent),#00d4b6);padding:10px 16px;border-radius:12px;color:#012; font-weight:700; box-shadow:0 8px 30px rgba(3,6,10,0.6)}
+    /* Hero */
+    .hero{margin-top:26px;background:var(--card);padding:28px;border-radius:24px;box-shadow:0 10px 30px rgba(2,6,10,0.6)}
+    .hero h2{font-size:36px;margin:0 0 10px;line-height:1.02}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:999px;background:var(--accent);color:#022;font-weight:700;border:none}
+    .btn-outline{padding:12px 18px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white)}
+    /* Cards grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .card{background:var(--glass);padding:18px;border-radius:16px;border:1px solid rgba(255,255,255,0.02)}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted);font-size:14px}
+    /* Pricing */
+    .pricing{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:20px;border:1px solid rgba(255,255,255,0.03)}
+    .price-top{display:flex;justify-content:space-between;align-items:center}
+    .price{color:var(--gold);font-weight:800;font-size:20px}
+    /* contact */
+    footer{margin-top:30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .contact-card{background:var(--card);padding:16px;border-radius:14px;min-width:280px}
+    .wh{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:#06d0c8;color:#012;font-weight:700}
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .pricing{grid-template-columns:repeat(2,1fr)}
+      .hero h2{font-size:30px}
+    }
+    @media (max-width:600px){
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      .grid{grid-template-columns:1fr}
+      .pricing{grid-template-columns:1fr}
+      .hero h2{font-size:26px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <!-- logo: if you uploaded assets/logo.png it'll show. Otherwise text -->
+        <div class="logo">
+          <img src="assets/logo.png" alt="logo" style="width:42px;height:42px;border-radius:8px;object-fit:cover;" onerror="this.style.display='none'">
+          <span style="display:inline-block;color:#022;font-weight:800" id="logoText">AI</span>
+        </div>
+        <div>
+          <h1 style="font-size:16px;margin-bottom:4px">AI Innovator</h1>
+          <div class="muted" style="font-size:12px">AI Automation • Business Growth</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="nav-btn" onclick="scrollToSection('services')">Services</button>
+        <button class="nav-btn" onclick="scrollToSection('pricing')">Pricing</button>
+        <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
+        <a class="cta" href="#contact">Get Started</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <h2>Grow your business with AI automation</h2>
+      <p>Turn WhatsApp, Instagram & Facebook into 24/7 AI-powered sales machines — without extra staff.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://wa.me/918381014205?text=Hello%20AI%20Innovator" target="_blank">WhatsApp Us (Fast Reply)</a>
+        <a class="btn-outline" href="tel:+918381014205">Call Us</a>
+      </div>
+
+      <div class="grid" style="margin-top:20px">
+        <div class="card">
+          <h3>WhatsApp Auto-Reply</h3>
+          <div class="muted">24/7 instant replies, lead capture & tagging.</div>
+        </div>
+        <div class="card">
+          <h3>AI Lead Follow-Up</h3>
+          <div class="muted">Automated time-based follow-ups to convert leads.</div>
+        </div>
+        <div class="card">
+          <h3>CRM Integrations</h3>
+          <div class="muted">Save leads, reminders and central pipeline overview.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="price-card">
+        <div class="price-top">
+          <div><strong>Basic</strong><div class="muted">Perfect for beginners</div></div>
+          <div class="price">₹1,999</div>
+        </div>
+        <ul class="muted" style="margin-top:12px;padding-left:18px">
+          <li>WhatsApp Auto-Reply Setup</li>
+          <li>Basic DM automation</li>
+        </ul>
+        <div style="margin-top:12px">
+          <a class="btn" href="#contact">Get Basic</a>
+          <a class="btn-outline" style="margin-left:8px" href="#contact">Ask Question</a>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <div class="price-top">
+          <div><strong>Standard</strong><div class="muted">Growing businesses</div></div>
+          <div class="price">₹2,999</div>
+        </div>
+        <ul class="muted" style="margin-top:12px;padding-left:18px">
+          <li>WhatsApp + Instagram automation</li>
+          <li>AI lead follow-up</li>
+        </ul>
+        <div style="margin-top:12px">
+          <a class="btn" href="#contact">Get Standard</a>
+          <a class="btn-outline" style="margin-left:8px" href="#contact">Ask</a>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <div class="price-top">
+          <div><strong>Premium</strong><div class="muted">Full AI automation</div></div>
+          <div class="price">₹4,999+</div>
+        </div>
+        <ul class="muted" style="margin-top:12px;padding-left:18px">
+          <li>WhatsApp + IG + FB</li>
+          <li>CRM + Global outreach</li>
+        </ul>
+        <div style="margin-top:12px">
+          <a class="btn" href="#contact">Get Premium</a>
+          <a class="btn-outline" style="margin-left:8px" href="#contact">Talk to us</a>
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top:28px">
+      <div class="contact-card" id="contact">
+        <strong>Get in touch</strong>
+        <div class="muted" style="margin-top:6px">Email: hello@aiinnovator.com<br>Phone/WhatsApp: +91 83810 14205</div>
+        <div style="margin-top:12px">
+          <a class="wh" target="_blank" href="https://wa.me/918381014205?text=Hello%20AI%20Innovator">💬 WhatsApp Us</a>
+          <a class="btn-outline" style="margin-left:10px" href="tel:+918381014205">📞 Call Us</a>
+        </div>
+      </div>
+
+      <div style="min-width:220px" class="muted">© <span id="year"></span> AI Innovator — AI-Powered Automation for Global Growth.</div>
+    </footer>
+  </div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function scrollToSection(id){
+      const el = document.getElementById(id);
+      if(!el) return window.scrollTo({top:0,behavior:'smooth'});
+      el.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  </script>
+</body>
+</html>
