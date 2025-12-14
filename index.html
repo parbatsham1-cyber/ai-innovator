@@ -2,136 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AI Innovator – AI Automation Solutions</title>
+  <title>AI Innovator | AI Automation for Business</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI Innovator provides AI Automation, WhatsApp AI Bots, Lead Automation and Business Growth Solutions globally.">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="AI Innovator provides AI automation for WhatsApp, Instagram & business growth.">
 
   <style>
+    * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #070b12;
+      background: #0b1220;
       color: #ffffff;
     }
-    a { text-decoration: none; }
+    a { text-decoration: none; color: inherit; }
 
     header {
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 24px;
-      background: #0b1220;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      background: #0f172a;
     }
 
     .logo {
-      font-size: 20px;
-      font-weight: 800;
-      color: #00ffd5;
+      font-size: 22px;
+      font-weight: bold;
+      color: #22d3ee;
     }
 
     nav a {
-      margin-left: 16px;
-      color: #ffffff;
+      margin-left: 15px;
       font-weight: 600;
+      color: #e5e7eb;
     }
 
     .hero {
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
-      background: linear-gradient(180deg, #0b1220, #070b12);
     }
 
     .hero h1 {
-      font-size: 42px;
-      margin-bottom: 16px;
+      font-size: 38px;
+      margin-bottom: 10px;
     }
 
     .hero p {
       font-size: 18px;
-      color: #b5c0d0;
+      color: #cbd5f5;
       max-width: 700px;
       margin: auto;
     }
 
-    .hero-buttons {
-      margin-top: 30px;
+    .buttons {
+      margin-top: 25px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 26px;
-      border-radius: 30px;
-      font-weight: 700;
+      padding: 14px 22px;
       margin: 8px;
+      border-radius: 30px;
+      font-weight: bold;
+      background: #22d3ee;
+      color: #020617;
     }
 
-    .btn-primary {
-      background: #00ffd5;
-      color: #000;
-    }
-
-    .btn-outline {
-      border: 2px solid #00ffd5;
-      color: #00ffd5;
+    .btn.outline {
+      background: transparent;
+      border: 2px solid #22d3ee;
+      color: #22d3ee;
     }
 
     section {
-      padding: 70px 20px;
+      padding: 50px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      background: #0b1220;
-      padding: 24px;
+      background: #111827;
+      padding: 25px;
       border-radius: 16px;
     }
 
     .card h3 {
       margin-top: 0;
-      color: #00ffd5;
+      color: #38bdf8;
     }
 
     .pricing {
-      background: #0b1220;
-      border-radius: 16px;
-      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .price-card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
     }
 
     .price {
       font-size: 26px;
-      font-weight: 800;
+      color: #facc15;
+      font-weight: bold;
       margin: 10px 0;
     }
 
     footer {
-      background: #0b1220;
-      padding: 40px 20px;
+      background: #020617;
+      padding: 30px 20px;
       text-align: center;
-      color: #b5c0d0;
-    }
-
-    footer a {
-      color: #00ffd5;
-      font-weight: 600;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 30px; }
+      color: #94a3b8;
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -144,12 +137,15 @@
 </header>
 
 <section class="hero">
-  <h1>AI Automation for Business Growth</h1>
-  <p>We build AI-powered WhatsApp bots, lead automation systems and smart workflows that help businesses grow faster — globally.</p>
+  <h1>AI Automation That Grows Your Business</h1>
+  <p>
+    We build AI-powered automation for WhatsApp, Instagram & online businesses.
+    Convert leads automatically, 24/7.
+  </p>
 
-  <div class="hero-buttons">
-    <a class="btn btn-primary" href="https://wa.me/918381014205" target="_blank">WhatsApp Us</a>
-    <a class="btn btn-outline" href="tel:+918381014205">Call Now</a>
+  <div class="buttons">
+    <a class="btn" href="https://wa.me/918381014205" target="_blank">WhatsApp Us</a>
+    <a class="btn outline" href="#pricing">View Plans</a>
   </div>
 </section>
 
@@ -158,54 +154,61 @@
   <div class="grid">
     <div class="card">
       <h3>WhatsApp AI Automation</h3>
-      <p>24/7 auto-reply, lead capture, AI chat flows & follow-ups.</p>
+      <p>Auto-replies, lead capture & follow-ups.</p>
     </div>
     <div class="card">
-      <h3>AI Lead Generation</h3>
-      <p>Convert website & social traffic into paying customers.</p>
+      <h3>Instagram DM Automation</h3>
+      <p>Convert comments & DMs into leads.</p>
     </div>
     <div class="card">
-      <h3>Business Automation</h3>
-      <p>CRM, notifications, reminders and workflow automation.</p>
+      <h3>AI Sales Funnel</h3>
+      <p>AI system that sells even while you sleep.</p>
     </div>
   </div>
 </section>
 
 <section id="pricing">
   <h2>Pricing Plans</h2>
-  <div class="grid">
-    <div class="pricing">
+
+  <div class="pricing">
+    <div class="price-card">
       <h3>Basic</h3>
       <div class="price">₹1,999</div>
-      <p>WhatsApp basic automation setup</p>
-      <a class="btn btn-primary" href="https://wa.me/918381014205?text=I%20want%20Basic%20AI%20Automation" target="_blank">Get Basic</a>
+      <p>WhatsApp basic automation</p>
+      <a class="btn" href="#contact">Get Basic</a>
     </div>
 
-    <div class="pricing">
+    <div class="price-card">
       <h3>Standard</h3>
       <div class="price">₹2,999</div>
       <p>WhatsApp + Instagram automation</p>
-      <a class="btn btn-primary" href="https://wa.me/918381014205?text=I%20want%20Standard%20AI%20Automation" target="_blank">Get Standard</a>
+      <a class="btn" href="#contact">Get Standard</a>
     </div>
 
-    <div class="pricing">
+    <div class="price-card">
       <h3>Premium</h3>
       <div class="price">₹4,999+</div>
-      <p>Full AI automation + CRM + integrations</p>
-      <a class="btn btn-primary" href="https://wa.me/918381014205?text=I%20want%20Premium%20AI%20Automation" target="_blank">Get Premium</a>
+      <p>Full AI automation + CRM</p>
+      <a class="btn" href="#contact">Get Premium</a>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:hello@aiinnovator.com">hello@aiinnovator.com</a></p>
-  <p>Phone / WhatsApp: <a href="https://wa.me/918381014205">+91 83810 14205</a></p>
+  <p>Talk directly with our team.</p>
+
+  <div class="buttons">
+    <a class="btn" href="https://wa.me/918381014205" target="_blank">Chat on WhatsApp</a>
+    <a class="btn outline" href="tel:+918381014205">Call Now</a>
+  </div>
+
+  <p style="margin-top:15px;">Phone: +91 83810 14205</p>
 </section>
 
 <footer>
-  © 2025 AI Innovator • Global AI Automation Solutions
+  © 2025 AI Innovator. All rights reserved.
 </footer>
 
 </body>
-</html>
+  </html>
