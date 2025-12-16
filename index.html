@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Innovator – AI Automation Service</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Innovator – Global AI Automation</title>
 
 <style>
 :root{
-  --bg:#050b1e;
-  --card:#0c1a2b;
+  --bg:#060b23;
+  --card:#0e1b34;
   --primary:#19c5ff;
   --text:#eaf4ff;
   --muted:#9fb3c8;
+  --success:#2dff9d;
 }
 
 *{
@@ -32,15 +33,15 @@ body{
 .card{
   width:100%;
   max-width:420px;
-  background:linear-gradient(180deg,#0e2440,#091628);
-  border-radius:22px;
+  background:linear-gradient(180deg,#0f2446,#081427);
+  border-radius:24px;
   padding:32px 26px;
-  box-shadow:0 25px 80px rgba(0,0,0,.6);
+  box-shadow:0 30px 90px rgba(0,0,0,.6);
   text-align:center;
 }
 
 h1{
-  margin:0 0 8px;
+  margin:0 0 6px;
   font-size:28px;
 }
 
@@ -54,13 +55,13 @@ h1{
   font-size:44px;
   color:var(--primary);
   font-weight:700;
-  margin:18px 0;
+  margin:16px 0;
 }
 
 ul{
   list-style:none;
   padding:0;
-  margin:20px 0 26px;
+  margin:18px 0 26px;
   text-align:left;
 }
 
@@ -71,11 +72,18 @@ li{
 
 li::before{
   content:"✔ ";
-  color:#2dff9d;
+  color:var(--success);
+  font-weight:bold;
 }
 
 .pay-box{
   margin-top:20px;
+}
+
+.secure{
+  margin-top:14px;
+  font-size:12px;
+  color:var(--muted);
 }
 
 .footer{
@@ -102,9 +110,10 @@ li::before{
     <li>100% Secure Checkout</li>
   </ul>
 
+  <!-- 🔐 RAZORPAY PAYMENT BUTTON -->
   <div class="pay-box">
     <form>
-      <script 
+      <script
         src="https://checkout.razorpay.com/v1/payment-button.js"
         data-payment_button_id="pl_RsJHnUacaM0dHd"
         async>
@@ -112,9 +121,12 @@ li::before{
     </form>
   </div>
 
+  <div class="secure">
+    🔒 Secured by Razorpay
+  </div>
+
   <div class="footer">
-    🔒 Payments powered by Razorpay<br>
-    © 2025 AI Innovator
+    © 2025 AI Innovator • All rights reserved
   </div>
 </div>
 
