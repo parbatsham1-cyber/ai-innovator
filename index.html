@@ -38,7 +38,7 @@ nav a:hover{color:#fff}
 .hero h2{font-size:42px;margin-bottom:15px}
 .hero p{color:var(--muted);max-width:720px;margin:auto}
 
-/* SECTION */
+/* SECTIONS */
 section{padding:70px 8%}
 h3{text-align:center;font-size:32px;margin-bottom:40px}
 
@@ -68,34 +68,69 @@ footer{
   border-top:1px solid rgba(255,255,255,.05);
 }
 
+/* CHAT ICON */
+#chat-icon{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:linear-gradient(135deg,#19c5ff,#007bff);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  color:#000;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(0,0,0,.6);
+  z-index:1000;
+}
+
 /* CHATBOT */
 #chatbot{
-  position:fixed;bottom:20px;right:20px;
-  width:320px;background:#0b1735;
-  border-radius:18px;overflow:hidden;
-  box-shadow:0 0 30px rgba(0,0,0,.6);
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  width:320px;
+  background:#0b1735;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 0 35px rgba(0,0,0,.7);
+  display:none;
+  z-index:1000;
 }
 #chat-header{
   background:linear-gradient(90deg,#19c5ff,#007bff);
-  padding:12px;font-weight:bold;
+  padding:12px;
+  font-weight:bold;
+  display:flex;
+  justify-content:space-between;
 }
 #chat-body{
-  height:260px;padding:10px;
-  overflow-y:auto;font-size:14px;
+  height:260px;
+  padding:10px;
+  overflow-y:auto;
+  font-size:14px;
 }
 .msg{margin:8px 0}
 .bot{color:#9fd9ff}
 .user{text-align:right;color:#fff}
 #chat-input{
-  display:flex;border-top:1px solid #223;
+  display:flex;
+  border-top:1px solid #223;
 }
 #chat-input input{
-  flex:1;padding:10px;border:none;
-  background:#050b24;color:#fff;
+  flex:1;
+  padding:10px;
+  border:none;
+  background:#050b24;
+  color:#fff;
 }
 #chat-input button{
-  padding:10px 15px;border:none;
-  background:var(--primary);color:#000;
+  padding:10px 15px;
+  border:none;
+  background:var(--primary);
   cursor:pointer;
 }
 </style>
@@ -121,9 +156,9 @@ footer{
 <section id="services">
   <h3>Our Services</h3>
   <div class="grid">
-    <div class="card"><h4>AI Automation</h4><p>End-to-end automation for growth.</p></div>
+    <div class="card"><h4>AI Automation</h4><p>End-to-end automation for business growth.</p></div>
     <div class="card"><h4>Custom AI Bots</h4><p>Website, WhatsApp & support bots.</p></div>
-    <div class="card"><h4>Workflow Integration</h4><p>CRM, email & payment automation.</p></div>
+    <div class="card"><h4>Workflow Integration</h4><p>CRM, Email & payment automation.</p></div>
   </div>
 </section>
 
@@ -184,49 +219,59 @@ Global Service • 24×7 Availability
 </p>
 </section>
 
-<footer>
-© 2025 AI Innovator. All Rights Reserved.
-</footer>
+<footer>© 2025 AI Innovator. All Rights Reserved.</footer>
+
+<!-- CHAT ICON -->
+<div id="chat-icon" onclick="toggleChat()">🤖</div>
 
 <!-- CHATBOT -->
 <div id="chatbot">
-<div id="chat-header">Innovator AI</div>
-<div id="chat-body">
-<div class="msg bot">👋 Hi, I’m Innovator AI. Ask me about services, pricing or payments.</div>
-</div>
-<div id="chat-input">
-<input id="userInput" placeholder="Type your message...">
-<button onclick="send()">Send</button>
-</div>
+  <div id="chat-header">
+    Innovator AI
+    <span onclick="toggleChat()" style="cursor:pointer">✖</span>
+  </div>
+  <div id="chat-body">
+    <div class="msg bot">👋 Hi, I’m Innovator AI. Ask me about services, pricing or payments.</div>
+  </div>
+  <div id="chat-input">
+    <input id="userInput" placeholder="Type your message...">
+    <button onclick="send()">Send</button>
+  </div>
 </div>
 
 <script>
+function toggleChat(){
+  let box=document.getElementById("chatbot");
+  box.style.display = box.style.display==="block"?"none":"block";
+}
+
 function send(){
   let input=document.getElementById("userInput");
   let text=input.value.toLowerCase();
   if(!text) return;
-  chat("user",input.value);
+  add("user",input.value);
   input.value="";
 
   setTimeout(()=>{
     if(text.includes("price")||text.includes("plan")){
-      chat("bot","💳 Plans: Starter ₹999, Pro ₹2999, Premium ₹4999. You can pay directly on this page.");
+      add("bot","💳 Plans: Starter ₹999, Pro ₹2999, Premium ₹4999. Payments are live.");
     }else if(text.includes("service")){
-      chat("bot","🚀 We provide AI automation, custom AI bots & workflow integration.");
+      add("bot","🚀 Services: AI automation, custom bots & integrations.");
     }else if(text.includes("contact")){
-      chat("bot","📧 Contact: support@aiinnovator.in | 24×7 Global Support.");
+      add("bot","📧 Email: support@aiinnovator.in");
     }else{
-      chat("bot","🤖 I can help with pricing, services or payments.");
+      add("bot","🤖 I can help with pricing, services or payments.");
     }
-  },600);
+  },500);
 }
 
-function chat(type,msg){
-  let div=document.createElement("div");
-  div.className="msg "+type;
-  div.innerText=msg;
-  document.getElementById("chat-body").appendChild(div);
-  document.getElementById("chat-body").scrollTop=9999;
+function add(type,msg){
+  let d=document.createElement("div");
+  d.className="msg "+type;
+  d.innerText=msg;
+  let body=document.getElementById("chat-body");
+  body.appendChild(d);
+  body.scrollTop=9999;
 }
 </script>
 
