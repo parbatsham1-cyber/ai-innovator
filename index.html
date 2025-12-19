@@ -6,9 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  margin:0;
   font-family:Arial,Helvetica,sans-serif;
   background:#020617;
   color:#fff;
@@ -30,87 +29,82 @@ nav a{
 
 /* HERO */
 .hero{
-  min-height:70vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  padding:60px 20px;
   text-align:center;
-  padding:20px;
 }
-.hero h2{font-size:36px}
-.hero p{max-width:600px;color:#94a3b8}
+.hero h2{font-size:36px;margin-bottom:10px}
+.hero p{color:#94a3b8}
 
 /* PRICING */
 section{padding:60px 20px}
 .pricing{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
   max-width:1100px;
   margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 .card{
   background:#020617;
-  padding:30px;
   border-radius:18px;
-  box-shadow:0 0 40px rgba(0,0,0,.7);
+  padding:30px;
   text-align:center;
+  box-shadow:0 0 40px rgba(0,0,0,.7);
 }
+.card h3{margin-bottom:10px}
 .price{
   font-size:42px;
   color:#38bdf8;
   margin:15px 0;
 }
-.card p{color:#cbd5e1}
+.card p{color:#cbd5e1;line-height:1.6}
 
 /* FOOTER */
 footer{
-  text-align:center;
   padding:20px;
+  text-align:center;
   color:#94a3b8;
 }
 
-/* BOT FLOAT BUTTON */
+/* BOT BUTTON */
 .bot-btn{
   position:fixed;
   bottom:20px;
   right:20px;
-  background:#38bdf8;
-  color:#000;
   width:55px;
   height:55px;
   border-radius:50%;
+  background:#38bdf8;
+  color:#000;
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   font-size:24px;
   cursor:pointer;
-  box-shadow:0 0 25px rgba(0,0,0,.8);
-  z-index:999;
+  z-index:10000;
 }
 
 /* BOT BOX */
 .bot{
   position:fixed;
-  bottom:90px;
+  bottom:85px;
   right:20px;
-  width:300px;
+  width:320px;
   background:#020617;
-  border-radius:14px;
-  box-shadow:0 0 30px rgba(0,0,0,.9);
+  border-radius:15px;
+  box-shadow:0 0 40px rgba(0,0,0,.9);
   display:none;
-  z-index:999;
+  z-index:10001;
 }
 .bot-header{
   background:#38bdf8;
+  color:#000;
   padding:12px;
   text-align:center;
   font-weight:bold;
-  color:#000;
 }
 .bot-body{
-  padding:10px;
+  padding:12px;
 }
 .bot-msg{
   background:#020617;
@@ -122,12 +116,15 @@ footer{
 }
 .bot-body button{
   width:100%;
-  margin:5px 0;
-  padding:8px;
+  margin-top:6px;
+  padding:9px;
   border:none;
   border-radius:8px;
   cursor:pointer;
+  background:#1e293b;
+  color:#fff;
 }
+.bot-body button:hover{background:#334155}
 </style>
 </head>
 
@@ -141,43 +138,58 @@ footer{
   </nav>
 </header>
 
-<section class="hero">
+<div class="hero">
   <h2>Global AI Automation Solutions</h2>
-  <p>We help businesses grow using AI Automation, Chatbots & Smart Systems worldwide.</p>
-</section>
+  <p>AI Automation, Chatbots & Smart Business Systems for Global Growth.</p>
+</div>
 
 <section id="pricing">
-<h2 style="text-align:center">Pricing</h2>
+<h2 style="text-align:center;margin-bottom:30px">Pricing</h2>
 
 <div class="pricing">
 
+<!-- BASIC -->
 <div class="card">
 <h3>Basic</h3>
 <div class="price">₹999</div>
-<p>Starter AI Setup<br>Email Support<br>Secure Payment</p>
+<p>
+Starter AI Setup<br>
+Email Support<br>
+Secure Payment
+</p>
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtRcZkSR3iCW4z" async></script>
 </form>
 </div>
 
+<!-- PRO -->
 <div class="card">
 <h3>Pro</h3>
 <div class="price">₹2999</div>
-<p>Advanced Automation<br>Priority Support<br>Business Integration</p>
+<p>
+Advanced Automation<br>
+Priority Support<br>
+Business Integration
+</p>
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtSH27gmEDoGN7" async></script>
 </form>
 </div>
 
+<!-- PREMIUM -->
 <div class="card">
 <h3>Premium</h3>
 <div class="price">₹4999</div>
-<p>Full AI System<br>Dedicated Support<br>Global Deployment</p>
+<p>
+Full AI System<br>
+Dedicated Support<br>
+Global Deployment
+</p>
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
-data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></cript>
+data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
 </form>
 </div>
 
@@ -196,33 +208,37 @@ data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></cript>
 <!-- BOT BUTTON -->
 <div class="bot-btn" onclick="toggleBot()">🤖</div>
 
-<!-- BOT BOX -->
+<!-- BOT -->
 <div class="bot" id="botBox">
-<div class="bot-header">Innovator AI</div>
+<div class="bot-header">Innovator AI Assistant</div>
 <div class="bot-body" id="botBody">
-<div class="bot-msg">Hi 👋 I’m Innovator AI Assistant</div>
 
-<button onclick="reply('We provide AI Automation, Chatbots & Business AI Systems globally.')">Services</button>
-<button onclick="reply('Our plans start from ₹999 and go up to ₹4999.')">Pricing</button>
-<button onclick="reply('Payments are 100% secure via Razorpay.')">Payment</button>
-<button onclick="reply('Contact us at support@innovatorai.com')">Contact</button>
-<button onclick="reply('Innovator AI helps businesses scale using AI worldwide.')">About Us</button>
+<div class="bot-msg">
+Hi 👋  
+Ask me anything about Innovator AI
+</div>
+
+<button onclick="botReply('We provide AI Automation, Chatbots and Business AI Systems globally.')">Services</button>
+<button onclick="botReply('Our plans: Basic ₹999, Pro ₹2999, Premium ₹4999.')">Pricing</button>
+<button onclick="botReply('All payments are 100% secure via Razorpay.')">Payment</button>
+<button onclick="botReply('Email us at support@innovatorai.com')">Contact</button>
+<button onclick="botReply('Innovator AI helps businesses grow using AI worldwide.')">About Innovator AI</button>
 
 </div>
 </div>
 
 <script>
 function toggleBot(){
-  let bot=document.getElementById("botBox");
+  const bot=document.getElementById("botBox");
   bot.style.display = bot.style.display==="block" ? "none" : "block";
 }
-function reply(text){
-  let d=document.createElement("div");
-  d.className="bot-msg";
-  d.innerText=text;
-  document.getElementById("botBody").prepend(d);
+function botReply(text){
+  const div=document.createElement("div");
+  div.className="bot-msg";
+  div.innerText=text;
+  document.getElementById("botBody").prepend(div);
 }
 </script>
 
 </body>
-</html>
+  </html>
