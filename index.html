@@ -3,84 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Innovator AI – Global Automation</title>
+<title>Innovator AI – Global Automation Company</title>
 
 <style>
+*{box-sizing:border-box}
 body{
- margin:0;font-family:Arial,Helvetica;
- background:radial-gradient(circle at top,#0b1d4d,#050b24);
- color:#eaf4ff;
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:radial-gradient(circle at top,#0b1d4d,#040822);
+color:#eaf4ff;
 }
 header{
- position:fixed;top:0;width:100%;
- background:rgba(5,11,36,.9);
- padding:18px 8%;
- display:flex;justify-content:space-between;
- z-index:999;
+position:fixed;top:0;width:100%;
+padding:18px 8%;
+display:flex;justify-content:space-between;
+align-items:center;
+background:rgba(4,8,34,.92);
+z-index:999;
 }
-header h2{color:#22d3ff}
+header h2{color:#22d3ff;margin:0}
 nav a{
- color:#9fb3d1;margin-left:20px;
- text-decoration:none;font-size:15px;
+color:#9fb3d1;
+margin-left:18px;
+text-decoration:none;
+font-size:15px;
 }
-section{padding:120px 8%;min-height:100vh}
-.hero{text-align:center}
-.hero h1{font-size:50px}
-.hero p{color:#9fb3d1;max-width:800px;margin:auto}
-button{
- padding:14px 35px;border:none;
- border-radius:30px;background:#22d3ff;
- font-size:17px;cursor:pointer;
+section{padding:120px 8%}
+.hero{text-align:center;min-height:100vh}
+.hero h1{font-size:48px}
+.hero p{max-width:850px;margin:auto;color:#9fb3d1}
+.btn{
+padding:14px 36px;
+border-radius:30px;
+border:none;
+background:#22d3ff;
+font-size:16px;
+cursor:pointer;
+margin-top:25px;
 }
 .grid{
- display:grid;gap:25px;
- grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+display:grid;
+gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
 .card{
- background:linear-gradient(145deg,#0c1a3a,#08132d);
- padding:28px;border-radius:20px;
- transition:.4s;
+background:linear-gradient(145deg,#0c1a3a,#07132d);
+padding:28px;
+border-radius:20px;
+transition:.4s;
 }
 .card:hover{transform:translateY(-8px)}
 .price{font-size:38px;color:#22d3ff}
-footer{text-align:center;padding:30px;color:#9fb3d1}
+footer{
+text-align:center;
+padding:30px;
+color:#9fb3d1;
+border-top:1px solid #13234d;
+}
 
 /* BOT */
 #botIcon{
- position:fixed;right:20px;bottom:20px;
- width:55px;height:55px;border-radius:50%;
- background:#22d3ff;color:#000;
- display:flex;align-items:center;
- justify-content:center;font-size:24px;
- cursor:pointer;
+position:fixed;
+right:20px;
+bottom:20px;
+width:58px;height:58px;
+border-radius:50%;
+background:#22d3ff;
+color:#000;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+cursor:pointer;
+z-index:999;
 }
 #bot{
- display:none;position:fixed;
- right:20px;bottom:90px;
- width:320px;background:#fff;
- color:#000;border-radius:18px;
- overflow:hidden;
+display:none;
+position:fixed;
+right:20px;
+bottom:90px;
+width:320px;
+background:#fff;
+color:#000;
+border-radius:18px;
+overflow:hidden;
 }
 #botHeader{
- background:#22d3ff;padding:12px;
- font-weight:bold;
+background:#22d3ff;
+padding:12px;
+font-weight:bold;
 }
 #botBody{padding:12px}
 .botBtn{
- width:100%;padding:9px;
- margin-top:6px;border:none;
- border-radius:6px;
- background:#eef3ff;
- cursor:pointer;
+width:100%;
+padding:9px;
+margin-top:6px;
+border:none;
+border-radius:6px;
+background:#eef3ff;
+cursor:pointer;
 }
 input{
- width:100%;padding:8px;
- margin-top:8px;border-radius:6px;
+width:100%;
+padding:8px;
+margin-top:8px;
+border-radius:6px;
 }
-@media(max-width:700px){
- header{flex-direction:column}
- nav{margin-top:10px}
- .hero h1{font-size:36px}
+
+@media(max-width:768px){
+.hero h1{font-size:34px}
+header{flex-direction:column}
+nav{margin-top:10px}
 }
 </style>
 </head>
@@ -100,20 +133,20 @@ input{
 <!-- HOME -->
 <section id="home" class="hero">
 <h1>Global AI Automation for Modern Businesses</h1>
-<p>Enterprise-grade AI automation, smart bots & intelligent systems trusted worldwide.</p><br>
-<button onclick="location.href='#pricing'">Get Started</button>
+<p>Enterprise-grade AI automation, smart bots & intelligent systems trusted worldwide.</p>
+<button class="btn" onclick="location.href='#pricing'">Get Started</button>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
 <h2>Our Services</h2><br>
 <div class="grid">
-<div class="card">🤖 AI Chat Bots – 24×7 Client Support</div>
-<div class="card">⚙️ Business Automation Systems</div>
+<div class="card">🤖 AI Chat Bots (24×7 Sales & Support)</div>
+<div class="card">⚙️ Business Process Automation</div>
 <div class="card">🌍 Global Deployment & Scaling</div>
-<div class="card">💳 Secure Global Payments</div>
 <div class="card">📊 CRM, WhatsApp & Email Automation</div>
-<div class="card">🔐 Enterprise Security</div>
+<div class="card">🔐 Enterprise-grade Security</div>
+<div class="card">💳 Secure Global Payments</div>
 </div>
 </section>
 
@@ -128,10 +161,9 @@ input{
 <h3>Basic</h3>
 <div class="price">₹1999</div>
 <p>AI Bot<br>Email Support</p><br>
-
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
-data-payment_button_id="PASTE_BASIC_BUTTON_ID"></script>
+data-payment_button_id="pl_RsLLOuEFqU7gYy" async></script>
 </form>
 </div>
 
@@ -140,10 +172,9 @@ data-payment_button_id="PASTE_BASIC_BUTTON_ID"></script>
 <h3>Pro</h3>
 <div class="price">₹2999</div>
 <p>Advanced Automation<br>Priority Support</p><br>
-
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
-data-payment_button_id="PASTE_PRO_BUTTON_ID"></script>
+data-payment_button_id="pl_RsY4p5EJ76EmNF" async></script>
 </form>
 </div>
 
@@ -152,10 +183,9 @@ data-payment_button_id="PASTE_PRO_BUTTON_ID"></script>
 <h3>Premium</h3>
 <div class="price">₹4999</div>
 <p>Full AI System<br>Dedicated Support<br>Global Deployment</p><br>
-
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
-data-payment_button_id="PASTE_PREMIUM_BUTTON_ID"></script>
+data-payment_button_id="pl_RsHoWIHWKPuQsR" async></script>
 </form>
 </div>
 
@@ -164,9 +194,10 @@ data-payment_button_id="PASTE_PREMIUM_BUTTON_ID"></script>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2><br>
-<p>Email: support@innovatorai.global</p>
-<p>🌍 Global Service • ⚡ 24×7 AI Support</p>
+<h2>Contact Us</h2><br>
+<p>📧 support@innovatorai.global</p>
+<p>🌍 Serving clients worldwide</p>
+<p>⚡ 24×7 AI Powered Support</p>
 </section>
 
 <footer>
@@ -179,32 +210,33 @@ data-payment_button_id="PASTE_PREMIUM_BUTTON_ID"></script>
 <div id="bot">
 <div id="botHeader">Innovator AI</div>
 <div id="botBody">
-<p id="reply">Hi 👋 Ask me anything.</p>
+<p id="reply">Hi 👋 Ask anything about our business.</p>
 <button class="botBtn" onclick="ans('services')">Services</button>
 <button class="botBtn" onclick="ans('pricing')">Pricing</button>
 <button class="botBtn" onclick="ans('payment')">Payment</button>
 <button class="botBtn" onclick="ans('contact')">Contact</button>
-<input placeholder="Type your question…" onkeydown="if(event.key==='Enter')custom(this.value)">
+<input placeholder="Type your question…" 
+onkeydown="if(event.key==='Enter')custom(this.value)">
 </div>
 </div>
 
 <script>
 function toggleBot(){
- let b=document.getElementById("bot");
- b.style.display=b.style.display==="block"?"none":"block";
+let b=document.getElementById("bot");
+b.style.display=b.style.display==="block"?"none":"block";
 }
 function ans(t){
- let r="";
- if(t==="services")r="We provide AI bots, automation & global systems.";
- if(t==="pricing")r="We offer Basic, Pro & Premium plans.";
- if(t==="payment")r="Payments are secured via Razorpay.";
- if(t==="contact")r="Email: support@innovatorai.global";
- document.getElementById("reply").innerText=r;
+let r="";
+if(t==="services")r="We offer AI bots, automation & global systems.";
+if(t==="pricing")r="We have Basic, Pro & Premium plans.";
+if(t==="payment")r="Payments are securely processed via Razorpay.";
+if(t==="contact")r="Email us at support@innovatorai.global";
+document.getElementById("reply").innerText=r;
 }
 function custom(v){
- document.getElementById("reply").innerText="Thanks! We received: "+v;
+document.getElementById("reply").innerText="Thanks! Our team will contact you soon.";
 }
 </script>
 
 </body>
-</html>
+ </html>
