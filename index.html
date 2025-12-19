@@ -8,7 +8,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{
-  background:linear-gradient(135deg,#020617,#020617,#020617);
+  background:linear-gradient(135deg,#020617,#020617);
   color:#fff;
 }
 
@@ -71,10 +71,7 @@ section{padding:60px 20px}
   box-shadow:0 0 40px rgba(0,0,0,0.5);
 }
 .card h3{color:#38bdf8;margin-bottom:10px}
-
-/* PRICING */
 .price{font-size:40px;color:#38bdf8;margin:15px 0}
-.pay-box{text-align:center;margin-top:20px}
 
 /* BOT */
 .bot{
@@ -146,11 +143,11 @@ footer{
   <div class="cards">
     <div class="card">
       <h3>AI Automation</h3>
-      <p>End-to-end business automation solutions.</p>
+      <p>Business process automation using AI.</p>
     </div>
     <div class="card">
       <h3>AI Chatbots</h3>
-      <p>Smart bots for websites, WhatsApp & apps.</p>
+      <p>Smart bots for websites & WhatsApp.</p>
     </div>
     <div class="card">
       <h3>Global Deployment</h3>
@@ -163,19 +160,30 @@ footer{
   <h2 class="section-title">Pricing</h2>
   <div class="cards">
 
+    <!-- BASIC -->
+    <div class="card">
+      <h3>Basic</h3>
+      <div class="price">₹999</div>
+      <p>Starter AI Setup<br>Email Support</p>
+      <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js"
+          data-payment_button_id="pl_RTRcZkSR3iCW4z"
+          async>
+        </script>
+      </form>
+    </div>
+
     <!-- PRO -->
     <div class="card">
       <h3>Pro</h3>
       <div class="price">₹2999</div>
       <p>Advanced Automation<br>Priority Support</p>
-      <div class="pay-box">
-        <form>
-          <script src="https://checkout.razorpay.com/v1/payment-button.js"
-            data-payment_button_id="PUT_YOUR_2999_BUTTON_ID"
-            async>
-          </script>
-        </form>
-      </div>
+      <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js"
+          data-payment_button_id="pl_RtSH27gmEDoGN7"
+          async>
+        </script>
+      </form>
     </div>
 
     <!-- PREMIUM -->
@@ -183,14 +191,12 @@ footer{
       <h3>Premium</h3>
       <div class="price">₹4999</div>
       <p>Full AI System<br>Dedicated Support<br>Global Deployment</p>
-      <div class="pay-box">
-        <form>
-          <script src="https://checkout.razorpay.com/v1/payment-button.js"
-            data-payment_button_id="PUT_YOUR_4999_BUTTON_ID"
-            async>
-          </script>
-        </form>
-      </div>
+      <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js"
+          data-payment_button_id="pl_RtSNu3CiCHZ4mt"
+          async>
+        </script>
+      </form>
     </div>
 
   </div>
@@ -209,9 +215,9 @@ footer{
 <div class="bot">
   <div class="bot-header">Innovator AI</div>
   <div class="bot-body" id="botBody">
-    <div class="bot-msg">Hi 👋 Ask me anything about our business.</div>
+    <div class="bot-msg">Hi 👋 Ask me anything about our services.</div>
     <button onclick="botReply('We provide AI Automation, Chatbots & Global Deployment.')">Services</button>
-    <button onclick="botReply('Pro ₹2999 | Premium ₹4999')">Pricing</button>
+    <button onclick="botReply('Basic ₹999 | Pro ₹2999 | Premium ₹4999')">Pricing</button>
     <button onclick="botReply('Payments are secured via Razorpay.')">Payment</button>
     <button onclick="botReply('Email: support@innovatorai.com')">Contact</button>
   </div>
@@ -227,4 +233,4 @@ function botReply(text){
 </script>
 
 </body>
-  </html>
+</html>
