@@ -66,35 +66,35 @@ footer{
   color:#94a3b8;
 }
 
-/* BOT BUTTON */
+/* BOT ICON */
 .bot-btn{
   position:fixed;
   bottom:20px;
   right:20px;
-  width:55px;
-  height:55px;
+  width:56px;
+  height:56px;
   border-radius:50%;
   background:#38bdf8;
   color:#000;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:24px;
+  font-size:26px;
   cursor:pointer;
-  z-index:10000;
+  z-index:9999;
 }
 
-/* BOT BOX */
+/* BOT WINDOW */
 .bot{
   position:fixed;
-  bottom:85px;
+  bottom:90px;
   right:20px;
   width:320px;
   background:#020617;
-  border-radius:15px;
+  border-radius:16px;
   box-shadow:0 0 40px rgba(0,0,0,.9);
   display:none;
-  z-index:10001;
+  z-index:10000;
 }
 .bot-header{
   background:#38bdf8;
@@ -105,6 +105,8 @@ footer{
 }
 .bot-body{
   padding:12px;
+  max-height:300px;
+  overflow-y:auto;
 }
 .bot-msg{
   background:#020617;
@@ -114,7 +116,7 @@ footer{
   margin-bottom:8px;
   font-size:14px;
 }
-.bot-body button{
+.bot-actions button{
   width:100%;
   margin-top:6px;
   padding:9px;
@@ -124,7 +126,28 @@ footer{
   background:#1e293b;
   color:#fff;
 }
-.bot-body button:hover{background:#334155}
+.bot-actions button:hover{background:#334155}
+
+/* ASK INPUT */
+.bot-input{
+  display:flex;
+  gap:6px;
+  margin-top:8px;
+}
+.bot-input input{
+  flex:1;
+  padding:8px;
+  border-radius:8px;
+  border:none;
+}
+.bot-input button{
+  padding:8px 12px;
+  border:none;
+  border-radius:8px;
+  background:#38bdf8;
+  color:#000;
+  cursor:pointer;
+}
 </style>
 </head>
 
@@ -139,8 +162,8 @@ footer{
 </header>
 
 <div class="hero">
-  <h2>Global AI Automation Solutions</h2>
-  <p>AI Automation, Chatbots & Smart Business Systems for Global Growth.</p>
+  <h2>Global AI Automation for Businesses</h2>
+  <p>We build AI Automation, Chatbots & Business AI Systems worldwide.</p>
 </div>
 
 <section id="pricing">
@@ -148,45 +171,30 @@ footer{
 
 <div class="pricing">
 
-<!-- BASIC -->
 <div class="card">
 <h3>Basic</h3>
 <div class="price">₹999</div>
-<p>
-Starter AI Setup<br>
-Email Support<br>
-Secure Payment
-</p>
+<p>Starter AI Setup<br>Email Support<br>Secure Payment</p>
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtRcZkSR3iCW4z" async></script>
 </form>
 </div>
 
-<!-- PRO -->
 <div class="card">
 <h3>Pro</h3>
 <div class="price">₹2999</div>
-<p>
-Advanced Automation<br>
-Priority Support<br>
-Business Integration
-</p>
+<p>Advanced Automation<br>Priority Support<br>Business Integration</p>
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtSH27gmEDoGN7" async></script>
 </form>
 </div>
 
-<!-- PREMIUM -->
 <div class="card">
 <h3>Premium</h3>
 <div class="price">₹4999</div>
-<p>
-Full AI System<br>
-Dedicated Support<br>
-Global Deployment
-</p>
+<p>Full AI System<br>Dedicated Support<br>Global Deployment</p>
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
@@ -205,24 +213,32 @@ data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
 © 2025 Innovator AI. All Rights Reserved.
 </footer>
 
-<!-- BOT BUTTON -->
+<!-- BOT ICON -->
 <div class="bot-btn" onclick="toggleBot()">🤖</div>
 
 <!-- BOT -->
 <div class="bot" id="botBox">
 <div class="bot-header">Innovator AI Assistant</div>
-<div class="bot-body" id="botBody">
 
+<div class="bot-body" id="botBody">
 <div class="bot-msg">
 Hi 👋  
-Ask me anything about Innovator AI
+I am Innovator AI Assistant.  
+Ask me anything about our services.
 </div>
 
-<button onclick="botReply('We provide AI Automation, Chatbots and Business AI Systems globally.')">Services</button>
+<div class="bot-actions">
+<button onclick="botReply('We provide AI Automation, Chatbots and Business AI Systems for global clients.')">Services</button>
 <button onclick="botReply('Our plans: Basic ₹999, Pro ₹2999, Premium ₹4999.')">Pricing</button>
-<button onclick="botReply('All payments are 100% secure via Razorpay.')">Payment</button>
-<button onclick="botReply('Email us at support@innovatorai.com')">Contact</button>
+<button onclick="botReply('All payments are 100% secure and processed via Razorpay.')">Payment</button>
+<button onclick="botReply('Contact us at support@innovatorai.com')">Contact</button>
 <button onclick="botReply('Innovator AI helps businesses grow using AI worldwide.')">About Innovator AI</button>
+</div>
+
+<div class="bot-input">
+<input type="text" id="userQ" placeholder="Ask a question...">
+<button onclick="ask()">Send</button>
+</div>
 
 </div>
 </div>
@@ -232,13 +248,21 @@ function toggleBot(){
   const bot=document.getElementById("botBox");
   bot.style.display = bot.style.display==="block" ? "none" : "block";
 }
+
 function botReply(text){
   const div=document.createElement("div");
   div.className="bot-msg";
   div.innerText=text;
-  document.getElementById("botBody").prepend(div);
+  document.getElementById("botBody").appendChild(div);
+}
+
+function ask(){
+  const input=document.getElementById("userQ");
+  if(input.value.trim()==="") return;
+  botReply("You asked: "+input.value);
+  input.value="";
 }
 </script>
 
 </body>
-  </html>
+</html>
