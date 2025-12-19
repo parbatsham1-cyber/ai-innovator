@@ -7,19 +7,22 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<!-- Razorpay script ONLY ONCE -->
+<script src="https://checkout.razorpay.com/v1/payment-button.js"></script>
 </head>
+
 <body class="bg-gradient-to-b from-[#050b1a] to-black text-white">
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="flex justify-between items-center px-6 py-5">
   <h1 class="text-2xl font-bold text-sky-400">Innovator AI</h1>
-  <nav class="space-x-6 hidden md:block">
-    <a href="#pricing" class="hover:text-sky-400">Pricing</a>
-    <a href="#contact" class="hover:text-sky-400">Contact</a>
-  </nav>
+  <div class="space-x-6 hidden md:block">
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="text-center px-6 py-24">
   <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
     Global AI Automation for Businesses
@@ -29,152 +32,123 @@
   </p>
 </section>
 
-<!-- ================= GLOBAL COUNTRIES ================= -->
-<section class="text-center py-14">
-  <h3 class="text-xl font-semibold mb-8 text-sky-400">
-    🌍 Serving Clients Worldwide
-  </h3>
-  <div class="flex justify-center gap-8 text-lg flex-wrap">
-    🇮🇳 India
-    🇬🇧 United Kingdom
-    🇺🇸 United States
-    🇦🇪 UAE
-    🇨🇦 Canada
-    🇦🇺 Australia
+<!-- COUNTRIES -->
+<section class="text-center py-12">
+  <h3 class="text-xl text-sky-400 mb-6">🌍 Serving Clients Worldwide</h3>
+  <div class="flex justify-center gap-6 flex-wrap text-lg">
+    🇮🇳 India 🇬🇧 UK 🇺🇸 USA 🇦🇪 UAE 🇨🇦 Canada 🇦🇺 Australia
   </div>
 </section>
 
-<!-- ================= PRICING ================= -->
-<section id="pricing" class="px-6 py-24 text-center">
-  <h2 class="text-3xl font-bold mb-14">Pricing</h2>
+<!-- PRICING -->
+<section id="pricing" class="px-6 py-20 text-center">
+<h2 class="text-3xl font-bold mb-14">Pricing</h2>
 
-  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+<div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-    <!-- BASIC -->
-    <div class="bg-[#0b1225] rounded-2xl p-8 shadow-xl">
-      <h3 class="text-xl mb-2">Basic</h3>
-      <p class="text-4xl text-sky-400 font-bold mb-4">₹999</p>
-      <p class="text-gray-400 mb-6">
-        Starter AI Setup<br>Email Support<br>Secure Payment
-      </p>
+<!-- BASIC -->
+<div class="bg-[#0b1225] p-8 rounded-2xl">
+<h3>Basic</h3>
+<p class="text-4xl text-sky-400 font-bold">₹999</p>
+<p class="text-gray-400 my-4">Starter AI Setup<br>Email Support</p>
 
-      <!-- PAYMENT BASIC -->
-      <form>
-        <script src="https://checkout.razorpay.com/v1/payment-button.js"
-        data-payment_button_id="YOUR_BASIC_BUTTON_ID" async></script>
-      </form>
-    </div>
+<form>
+<button
+data-payment_button_id="REPLACE_BASIC_ID"
+class="razorpay-button">
+</button>
+</form>
+</div>
 
-    <!-- PRO -->
-    <div class="bg-[#0b1225] rounded-2xl p-8 shadow-xl border border-sky-500">
-      <h3 class="text-xl mb-2">Pro</h3>
-      <p class="text-4xl text-sky-400 font-bold mb-4">₹2999</p>
-      <p class="text-gray-400 mb-6">
-        Advanced Automation<br>Priority Support<br>Business Integration
-      </p>
+<!-- PRO -->
+<div class="bg-[#0b1225] p-8 rounded-2xl border border-sky-500">
+<h3>Pro</h3>
+<p class="text-4xl text-sky-400 font-bold">₹2999</p>
+<p class="text-gray-400 my-4">Advanced Automation<br>Priority Support</p>
 
-      <!-- PAYMENT PRO -->
-      <form>
-        <script src="https://checkout.razorpay.com/v1/payment-button.js"
-        data-payment_button_id="YOUR_PRO_BUTTON_ID" async></script>
-      </form>
-    </div>
+<form>
+<button
+data-payment_button_id="REPLACE_PRO_ID"
+class="razorpay-button">
+</button>
+</form>
+</div>
 
-    <!-- PREMIUM -->
-    <div class="bg-[#0b1225] rounded-2xl p-8 shadow-xl">
-      <h3 class="text-xl mb-2">Premium</h3>
-      <p class="text-4xl text-sky-400 font-bold mb-4">₹4999</p>
-      <p class="text-gray-400 mb-6">
-        Full AI System<br>Dedicated Support<br>Global Deployment
-      </p>
+<!-- PREMIUM -->
+<div class="bg-[#0b1225] p-8 rounded-2xl">
+<h3>Premium</h3>
+<p class="text-4xl text-sky-400 font-bold">₹4999</p>
+<p class="text-gray-400 my-4">Full AI System<br>Global Deployment</p>
 
-      <!-- PAYMENT PREMIUM -->
-      <form>
-        <script src="https://checkout.razorpay.com/v1/payment-button.js"
-        data-payment_button_id="YOUR_PREMIUM_BUTTON_ID" async></script>
-      </form>
-    </div>
+<form>
+<button
+data-payment_button_id="REPLACE_PREMIUM_ID"
+class="razorpay-button">
+</button>
+</form>
+</div>
 
-  </div>
+</div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer id="contact" class="text-center py-12 text-gray-400 text-sm">
-  <p class="font-semibold text-white">Innovator AI® – AI Automation & Business AI Systems</p>
-  <p>Serving clients globally</p>
-  <p class="flex justify-center items-center gap-2 mt-2">
-    🔒 Secure payments via Razorpay
-  </p>
-  <p class="mt-3">© 2025 Innovator AI. All Rights Reserved.</p>
+<!-- FOOTER -->
+<footer id="contact" class="text-center py-10 text-gray-400 text-sm">
+<p class="text-white font-semibold">Innovator AI® – AI Automation & Business AI Systems</p>
+<p>Serving clients globally</p>
+<p>🔒 Secure payments via Razorpay</p>
 </footer>
 
-<!-- ================= BOT ICON ================= -->
+<!-- BOT ICON (FIXED SIZE) -->
 <button id="botBtn"
-class="fixed bottom-6 right-6 w-28 h-28 rounded-full
+class="fixed bottom-5 right-5 w-16 h-16 rounded-full
 bg-gradient-to-r from-sky-500 to-blue-600
-shadow-2xl text-4xl hover:scale-110 transition z-50">
+text-2xl shadow-xl z-50">
 🤖
 </button>
 
-<!-- ================= BOT BOX ================= -->
+<!-- BOT BOX -->
 <div id="botBox"
-class="hidden fixed bottom-36 right-6 w-[380px] max-w-[95%]
-bg-gradient-to-b from-[#0b1225] to-black
-rounded-2xl shadow-2xl p-5 z-50 border border-slate-700">
+class="hidden fixed bottom-24 right-5 w-[320px]
+bg-[#0b1225] rounded-xl p-4 border border-slate-700 z-50">
 
-<h3 class="text-xl font-bold text-sky-400 mb-2">
-Innovator AI Assistant
-</h3>
+<h3 class="text-sky-400 font-bold mb-2">Innovator AI Assistant</h3>
 
-<p class="text-gray-400 text-sm mb-4">
-I am the official AI assistant of Innovator AI.  
-I only provide information about our company, services & pricing.
+<p class="text-gray-400 text-sm mb-3">
+I provide complete information about Innovator AI services & pricing.
 </p>
 
-<input id="userQ"
-type="text"
-placeholder="Ask about Innovator AI..."
-class="w-full p-3 rounded-lg bg-slate-800 text-white outline-none mb-3">
+<input id="q" class="w-full p-2 rounded bg-slate-800 mb-2" placeholder="Ask about Innovator AI">
 
-<button onclick="botReply()"
-class="w-full bg-sky-500 hover:bg-sky-600 py-3 rounded-lg font-semibold">
-Ask Question
+<button onclick="reply()" class="w-full bg-sky-500 py-2 rounded">
+Ask
 </button>
 
-<p id="botAns" class="text-gray-300 text-sm mt-4"></p>
-
+<p id="a" class="text-gray-300 text-sm mt-3"></p>
 </div>
 
-<!-- ================= BOT SCRIPT ================= -->
 <script>
-const botBtn = document.getElementById("botBtn");
-const botBox = document.getElementById("botBox");
+botBtn.onclick = ()=>botBox.classList.toggle("hidden");
 
-botBtn.onclick = () => {
-  botBox.classList.toggle("hidden");
-};
+function reply(){
+let q=document.getElementById("q").value.toLowerCase();
+let a="";
 
-function botReply() {
-  const q = document.getElementById("userQ").value.toLowerCase();
-  let r = "";
+if(q.includes("who")||q.includes("kya"))
+a="I am the official AI assistant of Innovator AI. We provide global AI automation solutions.";
 
-  if(q.includes("who") || q.includes("what") || q.includes("kya")) {
-    r = "Innovator AI is a global AI automation company providing AI chatbots, automation and business AI systems worldwide.";
-  }
-  else if(q.includes("service")) {
-    r = "Our services include AI Automation, Business Chatbots, Lead Automation, Customer Support Bots and Custom AI Systems.";
-  }
-  else if(q.includes("price") || q.includes("pricing")) {
-    r = "We offer three plans: Basic ₹999, Pro ₹2999 and Premium ₹4999 depending on your business needs.";
-  }
-  else if(q.includes("payment")) {
-    r = "All payments are 100% secure and processed globally via Razorpay.";
-  }
-  else {
-    r = "I am designed to help you understand Innovator AI, our services and pricing. Please ask related questions.";
-  }
+else if(q.includes("service"))
+a="Our services include AI chatbots, automation systems, business AI and global deployments.";
 
-  document.getElementById("botAns").innerText = r;
+else if(q.includes("price"))
+a="Our pricing: Basic ₹999, Pro ₹2999, Premium ₹4999.";
+
+else if(q.includes("payment"))
+a="All payments are 100% secure and handled via Razorpay.";
+
+else
+a="Please ask about Innovator AI services, pricing or payments.";
+
+document.getElementById("a").innerText=a;
 }
 </script>
 
