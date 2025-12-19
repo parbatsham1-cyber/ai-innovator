@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
 <title>Innovator AI – Global AI Automation</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#050b1a;
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(180deg,#020617,#020617);
 color:#fff;
 }
 header{
@@ -18,32 +17,44 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 }
-header h1{color:#3bc4ff;}
-header nav a{
-color:#ccc;
-margin-left:15px;
+header h1{color:#38bdf8;}
+nav a{color:#ccc;margin-left:15px;text-decoration:none;}
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+.hero h2{font-size:36px;}
+.hero p{color:#aaa;max-width:700px;margin:auto;}
+section{padding:60px 20px;text-align:center;}
+.card{
+background:#020617;
+border-radius:16px;
+padding:30px;
+margin:20px auto;
+max-width:350px;
+box-shadow:0 0 30px rgba(0,0,0,.4);
+}
+.price{font-size:48px;color:#38bdf8;}
+.btn{
+background:#1d4ed8;
+padding:12px 25px;
+border-radius:8px;
+color:#fff;
+display:inline-block;
+margin-top:15px;
 text-decoration:none;
 }
-section{padding:60px 20px;text-align:center;}
-.hero h2{font-size:42px;}
-.hero p{color:#aaa;font-size:18px;}
-
-.pricing{max-width:900px;margin:auto;}
-.card{
-background:#0b132b;
-border-radius:12px;
-padding:30px;
-margin:30px 0;
+.global div{
+display:inline-block;
+margin:10px 15px;
+font-size:18px;
 }
-.price{font-size:36px;color:#3bc4ff;}
-.pay-btn{margin-top:20px;}
-
 footer{
-padding:30px;
+padding:40px;
 background:#020617;
-text-align:center;
 color:#aaa;
 font-size:14px;
+text-align:center;
 }
 
 /* BOT */
@@ -51,31 +62,27 @@ font-size:14px;
 position:fixed;
 bottom:20px;
 right:20px;
-background:#3bc4ff;
-width:60px;
-height:60px;
+background:#38bdf8;
 border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
+padding:15px;
 cursor:pointer;
-font-size:28px;
-color:#000;
 }
 #botBox{
-display:none;
 position:fixed;
 bottom:90px;
 right:20px;
-width:300px;
-background:#0b132b;
-border-radius:12px;
-overflow:hidden;
+width:320px;
+background:#020617;
+border-radius:15px;
+display:none;
+box-shadow:0 0 30px rgba(0,0,0,.6);
 }
 #botHeader{
-background:#3bc4ff;
+background:#38bdf8;
+padding:12px;
+border-radius:15px 15px 0 0;
 color:#000;
-padding:10px;
+text-align:center;
 font-weight:bold;
 }
 #botBody{
@@ -84,23 +91,36 @@ height:220px;
 overflow-y:auto;
 font-size:14px;
 }
+.bot-msg{color:#38bdf8;margin:8px 0;}
+.user-msg{color:#fff;margin:8px 0;text-align:right;}
 #botInput{
 display:flex;
+padding:10px;
 }
 #botInput input{
 flex:1;
-padding:10px;
+padding:8px;
+border-radius:8px;
 border:none;
-outline:none;
 }
 #botInput button{
-padding:10px;
-background:#3bc4ff;
+margin-left:8px;
+background:#38bdf8;
 border:none;
+border-radius:8px;
+padding:8px 12px;
 cursor:pointer;
 }
-.bot-msg{margin-bottom:10px;color:#ccc;}
-.user-msg{color:#3bc4ff;}
+.quick button{
+width:100%;
+margin:6px 0;
+padding:8px;
+border-radius:8px;
+border:none;
+background:#1f2933;
+color:#fff;
+cursor:pointer;
+}
 </style>
 </head>
 
@@ -116,101 +136,110 @@ cursor:pointer;
 
 <section class="hero">
 <h2>Global AI Automation for Businesses</h2>
-<p>
-We help startups, agencies and enterprises scale using AI automation,
-chatbots and custom business AI systems.
-</p>
+<p>We build AI automation, chatbots & business AI systems worldwide.</p>
 </section>
 
-<section id="pricing" class="pricing">
-
+<section id="pricing">
 <h2>Pricing</h2>
 
 <div class="card">
 <h3>Basic</h3>
 <div class="price">₹999</div>
 <p>Starter AI Setup<br>Email Support<br>Secure Payment</p>
-<div class="pay-btn">
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtRcZkSR3iCW4z" async></script>
 </form>
-</div>
 </div>
 
 <div class="card">
 <h3>Pro</h3>
 <div class="price">₹2999</div>
 <p>Advanced Automation<br>Priority Support<br>Business Integration</p>
-<div class="pay-btn">
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtSH27gmEDoGN7" async></script>
 </form>
-</div>
 </div>
 
 <div class="card">
 <h3>Premium</h3>
 <div class="price">₹4999</div>
 <p>Full AI System<br>Dedicated Support<br>Global Deployment</p>
-<div class="pay-btn">
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
 </form>
 </div>
-</div>
+</section>
 
+<section class="global">
+<h2>🌍 Serving Clients Worldwide</h2>
+<div>🇮🇳 India</div>
+<div>🇬🇧 United Kingdom</div>
+<div>🇺🇸 United States</div>
+<div>🇦🇪 UAE</div>
+<div>🇨🇦 Canada</div>
+<div>🇦🇺 Australia</div>
 </section>
 
 <footer id="contact">
 <p>
 Innovator AI® – AI Automation & Business AI Systems<br>
 Serving clients globally<br>
-Secure payments via Razorpay
+🔒 Secure payments via Razorpay
 </p>
 </footer>
 
-<!-- BOT -->
-<div id="botIcon">🤖</div>
+<!-- BOT ICON -->
+<div id="botIcon" onclick="toggleBot()">🤖</div>
 
+<!-- BOT BOX -->
 <div id="botBox">
 <div id="botHeader">Innovator AI Assistant</div>
 <div id="botBody">
 <div class="bot-msg">
-Hi 👋 I’m Innovator AI Assistant.<br>
-I only answer questions about Innovator AI services, pricing,
-payments and business automation.
+Hi 👋 I am Innovator AI Assistant. Ask me anything about our services.
 </div>
+</div>
+<div class="quick">
+<button onclick="quick('services')">Services</button>
+<button onclick="quick('pricing')">Pricing</button>
+<button onclick="quick('payment')">Payment</button>
+<button onclick="quick('contact')">Contact</button>
+<button onclick="quick('global')">Global</button>
 </div>
 <div id="botInput">
-<input id="botText" placeholder="Ask about Innovator AI..." />
+<input id="botText" placeholder="Ask a question...">
 <button onclick="sendMsg()">Send</button>
 </div>
 </div>
 
 <script>
-const botIcon=document.getElementById("botIcon");
-const botBox=document.getElementById("botBox");
-botIcon.onclick=()=>botBox.style.display=
-botBox.style.display==="block"?"none":"block";
-
+function toggleBot(){
+let b=document.getElementById("botBox");
+b.style.display=b.style.display==="block"?"none":"block";
+}
+function quick(q){
+document.getElementById("botText").value=q;
+sendMsg();
+}
 function sendMsg(){
 let t=document.getElementById("botText");
 if(!t.value)return;
 let body=document.getElementById("botBody");
-body.innerHTML+=`<div class="user-msg">You: ${t.value}</div>`;
-
-let reply="Innovator AI provides AI automation, chatbots and business AI systems globally. Please ask about our services, pricing or payments.";
-
 let q=t.value.toLowerCase();
-if(q.includes("price")) reply="We offer 3 plans: Basic ₹999, Pro ₹2999, Premium ₹4999.";
-if(q.includes("payment")) reply="All payments are 100% secure via Razorpay.";
-if(q.includes("service")) reply="Our services include AI automation, chatbots and custom business AI systems.";
-if(q.includes("contact")) reply="You can contact us via this website after payment.";
+body.innerHTML+=`<div class="user-msg">${t.value}</div>`;
+let r="Ask about services, pricing, payment, delivery or global availability.";
 
-body.innerHTML+=`<div class="bot-msg">Bot: ${reply}</div>`;
+if(q.includes("service")) r="We provide AI automation, chatbots and business AI systems.";
+else if(q.includes("price")||q.includes("pricing")) r="Plans: Basic ₹999, Pro ₹2999, Premium ₹4999.";
+else if(q.includes("payment")) r="All payments are 100% secure via Razorpay.";
+else if(q.includes("delivery")) r="Setup starts within 24–48 hours after payment.";
+else if(q.includes("global")||q.includes("country")) r="We serve India, UK, USA, UAE, Canada and Australia.";
+else if(q.includes("contact")) r="You can contact us after payment through this website.";
+
+body.innerHTML+=`<div class="bot-msg">${r}</div>`;
 t.value="";
 body.scrollTop=body.scrollHeight;
 }
