@@ -1,121 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Innovator AI – Global AI Automation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovator AI – Global AI Automation</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-      background: radial-gradient(circle at top, #0b1a33, #050b1a);
-      color: #ffffff;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 24px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 700;
-      color: #3fc1ff;
-    }
-
-    nav a {
-      color: #cfd8e3;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px 60px;
-    }
-
-    .hero h1 {
-      font-size: 40px;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    .hero p {
-      font-size: 16px;
-      color: #b7c3d6;
-      max-width: 620px;
-      margin: 0 auto 28px;
-    }
-
-    /* 🔹 NEW BUTTON (ONLY ADDITION) */
-    .cta-btn {
-      display: inline-block;
-      padding: 14px 34px;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #3fc1ff, #1a8cff);
-      color: #00142a;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 10px 30px rgba(63,193,255,0.35);
-      transition: transform 0.2s ease;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .price-card {
-      background: rgba(255,255,255,0.04);
-      border-radius: 20px;
-      padding: 32px;
-      max-width: 320px;
-      margin: 20px auto;
-      box-shadow: 0 0 40px rgba(0,0,0,0.4);
-    }
-
-    .price-card h3 {
-      margin-bottom: 10px;
-    }
-
-    .price {
-      font-size: 36px;
-      color: #3fc1ff;
-      margin: 10px 0 16px;
-    }
-
-    footer {
-      padding: 40px 20px;
-      text-align: center;
-      color: #9fb0c8;
-      font-size: 13px;
-    }
-
-    /* Bot icon – unchanged */
-    .bot-icon {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: #3fc1ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      cursor: pointer;
-    }
-  </style>
+<style>
+body{
+  margin:0;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background:radial-gradient(circle at top,#0b1a33,#050b1a);
+  color:#fff;
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 24px;
+}
+.logo{
+  font-size:22px;
+  font-weight:700;
+  color:#3fc1ff;
+}
+nav a{
+  color:#cfd8e3;
+  margin-left:18px;
+  text-decoration:none;
+  font-size:14px;
+}
+.hero{
+  text-align:center;
+  padding:80px 20px 60px;
+}
+.hero h1{
+  font-size:40px;
+  margin-bottom:14px;
+}
+.hero p{
+  color:#b7c3d6;
+  max-width:620px;
+  margin:0 auto 26px;
+}
+.cta-btn{
+  display:inline-block;
+  padding:14px 36px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#3fc1ff,#1a8cff);
+  color:#00142a;
+  font-weight:600;
+  text-decoration:none;
+}
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+.price-card{
+  background:rgba(255,255,255,0.04);
+  border-radius:20px;
+  padding:34px 26px;
+  max-width:320px;
+  margin:24px auto;
+  box-shadow:0 0 40px rgba(0,0,0,0.45);
+}
+.price{
+  font-size:36px;
+  color:#3fc1ff;
+  margin:12px 0 18px;
+}
+footer{
+  padding:40px 20px;
+  text-align:center;
+  color:#9fb0c8;
+  font-size:13px;
+}
+.bot-icon{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#3fc1ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+</style>
 </head>
 
 <body>
@@ -128,61 +101,84 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <div class="hero">
   <h1>Global AI Automation for Businesses</h1>
-  <p>
-    We build AI Automation, Chatbots & Business AI Systems worldwide.
-  </p>
-
-  <!-- ✅ ONLY NEW BUTTON ADDED -->
-  <a href="#contact" class="cta-btn">
-    Get Free AI Consultation
-  </a>
+  <p>We build AI Automation, Chatbots & Business AI Systems worldwide.</p>
+  <a href="#pricing" class="cta-btn">Get Free AI Consultation</a>
 </div>
 
-<!-- PRICING -->
 <section id="pricing">
-  <h2>Pricing</h2>
+<h2>Pricing</h2>
 
-  <div class="price-card">
-    <h3>Basic</h3>
-    <div class="price">₹999</div>
-    <p>Starter AI Setup<br>Email Support<br>Secure Payment</p>
+<!-- ₹299 PLAN -->
+<div class="price-card">
+  <h3>Starter</h3>
+  <div class="price">₹299</div>
+  <p>AI Consultation<br>Business Overview<br>Email Support</p>
 
-    <!-- Razorpay – unchanged -->
-    <form>
-      <script src="https://checkout.razorpay.com/v1/payment-button.js"
-        data-payment_button_id="pl_RtRcZkSR3iCW4z" async>
-      </script>
-    </form>
-  </div>
+  <form>
+    <script 
+      src="https://checkout.razorpay.com/v1/payment-button.js"
+      data-payment_button_id="pl_299XXXX" async>
+    </script>
+  </form>
+</div>
 
-  <div class="price-card">
-    <h3>Pro</h3>
-    <div class="price">₹2999</div>
-    <p>Advanced Automation<br>Priority Support<br>Business Integration</p>
-  </div>
+<!-- ₹499 PLAN -->
+<div class="price-card">
+  <h3>Standard</h3>
+  <div class="price">₹499</div>
+  <p>AI Bot Setup<br>Business Guidance<br>Priority Email Support</p>
 
-  <div class="price-card">
-    <h3>Premium</h3>
-    <div class="price">₹4999</div>
-    <p>Full AI System<br>Dedicated Support<br>Global Deployment</p>
-  </div>
+  <form>
+    <script 
+      src="https://checkout.razorpay.com/v1/payment-button.js"
+      data-payment_button_id="pl_499XXXX" async>
+    </script>
+  </form>
+</div>
+
+<!-- ₹999 PLAN (UNCHANGED – YOUR EXISTING BUTTON) -->
+<div class="price-card">
+  <h3>Basic</h3>
+  <div class="price">₹999</div>
+  <p>Starter AI Setup<br>Email Support<br>Secure Payment</p>
+
+  <form>
+    <script 
+      src="https://checkout.razorpay.com/v1/payment-button.js"
+      data-payment_button_id="pl_RtRcZkSR3iCW4z" async>
+    </script>
+  </form>
+</div>
+
+<!-- ₹2999 -->
+<div class="price-card">
+  <h3>Pro</h3>
+  <div class="price">₹2999</div>
+  <p>Advanced Automation<br>Priority Support<br>Business Integration</p>
+</div>
+
+<!-- ₹4999 -->
+<div class="price-card">
+  <h3>Premium</h3>
+  <div class="price">₹4999</div>
+  <p>Full AI System<br>Dedicated Support<br>Global Deployment</p>
+</div>
+
 </section>
 
-<!-- GLOBAL -->
 <section>
-  <h2>🌍 Serving Clients Worldwide</h2>
-  <p>India · USA · UK · UAE · Canada · Australia</p>
+<h2>🌍 Serving Clients Worldwide</h2>
+<p>India · USA · UK · UAE · Canada · Australia</p>
 </section>
 
 <footer>
-  Innovator AI® – AI Automation & Business AI Systems<br/>
-  Secure payments via Razorpay
+Innovator AI® – AI Automation & Business AI Systems<br>
+🔒 Secure payments via Razorpay
 </footer>
 
-<!-- BOT ICON (UNCHANGED) -->
+<!-- BOT (UNCHANGED) -->
 <div class="bot-icon">🤖</div>
 
 </body>
