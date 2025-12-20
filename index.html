@@ -18,7 +18,7 @@ padding:20px 40px
 nav a{color:#aaa;margin-left:20px;text-decoration:none}
 nav a:hover{color:#fff}
 
-/* ✅ NEW CTA BUTTON (ONLY ADD) */
+/* CTA */
 .cta-btn{
 margin-left:25px;
 padding:8px 18px;
@@ -38,7 +38,6 @@ font-size:14px
 /* PRICING */
 .section{padding:60px 20px;text-align:center}
 .section h2{font-size:32px;margin-bottom:40px}
-
 .cards{display:flex;gap:25px;justify-content:center;flex-wrap:wrap}
 .card{
 background:#0b132b;border-radius:16px;
@@ -48,17 +47,13 @@ box-shadow:0 0 20px rgba(0,255,255,.1)
 .card h3{font-size:22px}
 .price{font-size:40px;color:#39c6ff;margin:15px 0}
 .card p{color:#ccc;margin:6px 0}
-
-/* PAY BUTTON */
 .pay-btn{margin-top:15px}
 
-/* GLOBAL CLIENTS */
+/* GLOBAL */
 .flags{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;font-size:18px}
 
 /* FOOTER */
-footer{
-text-align:center;padding:30px 15px;color:#aaa;font-size:14px
-}
+footer{text-align:center;padding:30px 15px;color:#aaa;font-size:14px}
 
 /* BOT */
 #botIcon{
@@ -80,16 +75,9 @@ overflow:hidden;z-index:999
 .msg{margin-bottom:8px}
 .user{color:#39c6ff}
 .bot{color:#fff}
-#chatInput{
-display:flex;border-top:1px solid #222
-}
-#chatInput input{
-flex:1;padding:10px;border:none;outline:none
-}
-#chatInput button{
-padding:10px 15px;border:none;
-background:#39c6ff;cursor:pointer
-}
+#chatInput{display:flex;border-top:1px solid #222}
+#chatInput input{flex:1;padding:10px;border:none;outline:none}
+#chatInput button{padding:10px 15px;border:none;background:#39c6ff;cursor:pointer}
 </style>
 </head>
 
@@ -100,8 +88,6 @@ background:#39c6ff;cursor:pointer
 <nav>
 <a href="#pricing">Pricing</a>
 <a href="#contact">Contact</a>
-
-<!-- ✅ ONLY ADD -->
 <a href="#pricing" class="cta-btn">Get Started</a>
 </nav>
 </header>
@@ -181,12 +167,12 @@ data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
 <div id="chatHeader">Innovator AI Assistant</div>
 <div id="chatMessages">
 <div class="msg bot">
-Hi 👋 I am the official Innovator AI assistant.  
-I provide complete information about our business, services and pricing.
+Hi 👋 I am Innovator AI Assistant.  
+I help you understand our services, pricing and how we work.
 </div>
 </div>
 <div id="chatInput">
-<input id="userText" placeholder="Ask about our services..." />
+<input id="userText" placeholder="Ask about services, pricing or process..." />
 <button onclick="sendMsg()">Send</button>
 </div>
 </div>
@@ -199,11 +185,28 @@ chatBox.style.display==="flex"?"none":"flex";
 
 function sendMsg(){
 let input=document.getElementById("userText");
-let text=input.value.trim();
+let text=input.value.trim().toLowerCase();
 if(!text)return;
 let chat=document.getElementById("chatMessages");
 chat.innerHTML+=`<div class="msg user">You: ${text}</div>`;
-let reply="Innovator AI is a global company providing AI automation, chatbots, business AI systems, secure integrations and worldwide deployment with trusted Razorpay payments.";
+
+let reply="We provide AI automation services for businesses.";
+
+if(text.includes("service"))
+reply="Our services include AI automation, business chatbots, sales & support automation and AI systems.";
+
+else if(text.includes("price") || text.includes("cost"))
+reply="Our pricing plans are ₹999 (Basic), ₹2999 (Pro) and ₹4999 (Premium). Secure payment via Razorpay.";
+
+else if(text.includes("delivery") || text.includes("time"))
+reply="After payment, we contact you and deliver setup within 24–72 hours.";
+
+else if(text.includes("payment") || text.includes("secure"))
+reply="All payments are processed securely via Razorpay with global standards.";
+
+else if(text.includes("contact"))
+reply="You can choose a plan directly from this website. We will contact you after payment.";
+
 chat.innerHTML+=`<div class="msg bot">${reply}</div>`;
 input.value="";
 chat.scrollTop=chat.scrollHeight;
@@ -212,24 +215,3 @@ chat.scrollTop=chat.scrollHeight;
 
 </body>
 </html>
-/* MOBILE HEADER FIX */
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .cta-btn {
-    margin-top: 8px;
-    padding: 8px 18px;
-    font-size: 14px;
-    white-space: nowrap;
-  }
-}
