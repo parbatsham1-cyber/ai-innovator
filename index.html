@@ -55,6 +55,14 @@ box-shadow:0 0 20px rgba(0,255,255,.1)
 /* FOOTER */
 footer{text-align:center;padding:30px 15px;color:#aaa;font-size:14px}
 
+/* CONTACT */
+.contact-info{
+margin-top:10px;
+color:#ccc;
+font-size:15px
+}
+.contact-info a{color:#39c6ff;text-decoration:none}
+
 /* BOT */
 #botIcon{
 position:fixed;bottom:20px;right:20px;
@@ -95,6 +103,12 @@ overflow:hidden;z-index:999
 <section class="hero">
 <h1>Global AI Automation for Businesses</h1>
 <p>We build AI Automation, Chatbots & Business AI Systems worldwide.</p>
+
+<!-- CONTACT INFO ADDED -->
+<div class="contact-info">
+📞 WhatsApp: <a href="https://wa.me/917507253658">+91 75072 53658</a> <br>
+📧 Email: <a href="mailto:innovatorai0@gmail.com">innovatorai0@gmail.com</a>
+</div>
 </section>
 
 <section id="pricing" class="section">
@@ -156,11 +170,14 @@ data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
 
 <footer id="contact">
 <p>Innovator AI® – AI Automation & Business AI Systems</p>
+<p class="contact-info">
+📞 WhatsApp: +91 75072 53658 | 📧 innovatorai0@gmail.com
+</p>
 <p>Serving clients globally | 🔒 Secure payments via Razorpay</p>
 <p>© 2025 Innovator AI. All Rights Reserved.</p>
 </footer>
 
-<!-- BOT -->
+<!-- BOT (UNCHANGED) -->
 <div id="botIcon">🤖</div>
 
 <div id="chatBox">
@@ -205,7 +222,7 @@ else if(text.includes("payment") || text.includes("secure"))
 reply="All payments are processed securely via Razorpay with global standards.";
 
 else if(text.includes("contact"))
-reply="You can choose a plan directly from this website. We will contact you after payment.";
+reply="You can WhatsApp us on +91 75072 53658 or email innovatorai0@gmail.com.";
 
 chat.innerHTML+=`<div class="msg bot">${reply}</div>`;
 input.value="";
