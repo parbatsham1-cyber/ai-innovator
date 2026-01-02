@@ -67,7 +67,7 @@ font-size:15px
 }
 .contact-info a{color:#39c6ff;text-decoration:none}
 
-/* BOT */
+/* BOT ICON */
 #botIcon{
 position:fixed;
 bottom:20px;
@@ -84,9 +84,10 @@ cursor:pointer;
 z-index:999
 }
 
+/* CHAT BOX (FIXED) */
 #chatBox{
 position:fixed;
-bottom:140px;
+bottom:100px;
 right:20px;
 width:320px;
 max-height:420px;
@@ -98,7 +99,12 @@ overflow:hidden;
 z-index:999
 }
 
-#chatHeader{background:#39c6ff;color:#000;padding:12px;font-weight:bold}
+#chatHeader{
+background:#39c6ff;
+color:#000;
+padding:12px;
+font-weight:bold
+}
 #chatMessages{flex:1;padding:10px;overflow-y:auto;font-size:14px}
 .msg{margin-bottom:8px}
 .user{color:#39c6ff}
@@ -141,12 +147,10 @@ z-index:999
 <p>Starter AI Setup</p>
 <p>Email Support</p>
 <p>Secure Payment</p>
-<div class="pay-btn">
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtRcZkSR3iCW4z" async></script>
 </form>
-</div>
 </div>
 
 <div class="card">
@@ -155,12 +159,10 @@ data-payment_button_id="pl_RtRcZkSR3iCW4z" async></script>
 <p>Advanced Automation</p>
 <p>Priority Support</p>
 <p>Business Integration</p>
-<div class="pay-btn">
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtSH27gmEDoGN7" async></script>
 </form>
-</div>
 </div>
 
 <div class="card">
@@ -169,21 +171,12 @@ data-payment_button_id="pl_RtSH27gmEDoGN7" async></script>
 <p>Full AI System</p>
 <p>Dedicated Support</p>
 <p>Global Deployment</p>
-<div class="pay-btn">
 <form>
 <script src="https://checkout.razorpay.com/v1/payment-button.js"
 data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
 </form>
 </div>
-</div>
 
-</div>
-</section>
-
-<section class="section">
-<h2>🌍 Serving Clients Worldwide</h2>
-<div class="flags">
-🇮🇳 India 🇺🇸 USA 🇬🇧 UK 🇦🇪 UAE 🇨🇦 Canada 🇦🇺 Australia
 </div>
 </section>
 
@@ -192,7 +185,6 @@ data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
 <p class="contact-info">
 📞 WhatsApp: +91 75072 53658 | 📧 innovatorai0@gmail.com
 </p>
-<p>Serving clients globally | 🔒 Secure payments via Razorpay</p>
 <p>© 2025 Innovator AI. All Rights Reserved.</p>
 </footer>
 
@@ -210,38 +202,30 @@ data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
 </div>
 
 <script>
-const botIcon = document.getElementById("botIcon");
-const chatBox = document.getElementById("chatBox");
-
-botIcon.onclick = () => {
-chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
-};
+const botIcon=document.getElementById("botIcon");
+const chatBox=document.getElementById("chatBox");
+botIcon.onclick=()=>{chatBox.style.display=chatBox.style.display==="flex"?"none":"flex";};
 
 async function sendMsg(){
-let input = document.getElementById("userText");
-let text = input.value.trim();
-if(!text) return;
+let input=document.getElementById("userText");
+let text=input.value.trim();
+if(!text)return;
 
-let chat = document.getElementById("chatMessages");
-chat.innerHTML += `<div class="msg user">You: ${text}</div>`;
-input.value = "";
-chat.scrollTop = chat.scrollHeight;
+let chat=document.getElementById("chatMessages");
+chat.innerHTML+=`<div class="msg user">You: ${text}</div>`;
+input.value="";
+chat.scrollTop=chat.scrollHeight;
 
 try{
-let res = await fetch("https://innovatorai2025.app.n8n.cloud/webhook/b40420c1-d090-4151-b034-20eb96b60006",{
+let res=await fetch("https://innovatorai2025.app.n8n.cloud/webhook/b40420c1-d090-4151-b034-20eb96b60006",{
 method:"POST",
-headers:{ "Content-Type":"application/json" },
-body: JSON.stringify({ message: text })
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({text:text})
 });
-
-let data = await res.json();
-let reply = data.reply || data.output || "Jarvis is thinking...";
-
-chat.innerHTML += `<div class="msg bot">${reply}</div>`;
-chat.scrollTop = chat.scrollHeight;
-
+let data=await res.json();
+chat.innerHTML+=`<div class="msg bot">${data.text||"Jarvis is thinking..."}</div>`;
 }catch(e){
-chat.innerHTML += `<div class="msg bot">⚠️ Jarvis temporarily unavailable.</div>`;
+chat.innerHTML+=`<div class="msg bot">⚠️ Jarvis temporarily unavailable.</div>`;
 }
 }
 </script>
