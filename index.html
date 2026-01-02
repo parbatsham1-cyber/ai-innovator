@@ -1,146 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html>    <html lang="en">    
+<head>    
+<meta charset="UTF-8">    <!-- ✅ GOOGLE SEARCH CONSOLE VERIFICATION -->    <meta name="google-site-verification" content="XAyhdUlsNDBhtcsQ8g2AocSxT9Wwx1EQiZHI3BA6Stk" />    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>Innovator AI – Global AI Automation</title>    <style>    
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}    
+body{background:linear-gradient(180deg,#050b1e,#020617);color:#fff}    
+/* HEADER */    
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px}    
+.logo{font-size:28px;font-weight:700;color:#39c6ff}    
+nav a{color:#aaa;margin-left:20px;text-decoration:none}    
+nav a:hover{color:#fff}    
+.cta-btn{margin-left:25px;padding:8px 18px;border-radius:20px;background:#39c6ff;color:#000 !important;font-weight:600;font-size:14px}    
+.cta-btn:hover{background:#5ed4ff}    
+.hero{text-align:center;padding:80px 20px}    
+.hero h1{font-size:42px;margin-bottom:15px}    
+.hero p{color:#bbb;font-size:18px}    
+.section{padding:60px 20px;text-align:center}    
+.section h2{font-size:32px;margin-bottom:40px}    
+.cards{display:flex;gap:25px;justify-content:center;flex-wrap:wrap}    
+.card{background:#0b132b;border-radius:16px;padding:30px;width:300px;box-shadow:0 0 20px rgba(0,255,255,.1)}    
+.card h3{font-size:22px}    
+.price{font-size:40px;color:#39c6ff;margin:15px 0}    
+.card p{color:#ccc;margin:6px 0}    
+footer{text-align:center;padding:30px 15px;color:#aaa;font-size:14px}    
+#botIcon{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#39c6ff;display:flex;justify-content:center;align-items:center;font-size:30px;cursor:pointer;z-index:999}    
+#chatBox{position:fixed;bottom:90px;right:20px;width:320px;max-height:420px;background:#0b132b;border-radius:14px;display:none;flex-direction:column;overflow:hidden;z-index:999}    
+#chatHeader{background:#39c6ff;color:#000;padding:12px;font-weight:bold}    
+#chatMessages{flex:1;padding:10px;overflow-y:auto;font-size:14px}    
+.msg{margin-bottom:8px}    
+.user{color:#39c6ff}    
+.bot{color:#fff}    
+#chatInput{display:flex;border-top:1px solid #222}    
+#chatInput input{flex:1;padding:10px;border:none;outline:none}    
+#chatInput button{padding:10px 15px;border:none;background:#39c6ff;cursor:pointer}    
+</style>    
+</head>    
 
-<meta name="google-site-verification" content="XAyhdUlsNDBhtcsQ8g2AocSxT9Wwx1EQiZHI3BA6Stk" />
+<body>    
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Innovator AI – Global AI Automation</title>
+<!-- {{ { "text": $json.text } }} -->
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:linear-gradient(180deg,#050b1e,#020617);color:#fff}
+<header>    
+<div class="logo">Innovator AI</div>    
+<nav>    
+<a href="#pricing">Pricing</a>    
+<a href="#contact">Contact</a>    
+<a href="#pricing" class="cta-btn">Get Started</a>    
+</nav>    
+</header>    
 
-header{
-display:flex;justify-content:space-between;align-items:center;
-padding:20px 40px
-}
-.logo{font-size:28px;font-weight:700;color:#39c6ff}
-nav a{color:#aaa;margin-left:20px;text-decoration:none}
-nav a:hover{color:#fff}
-.cta-btn{
-margin-left:25px;
-padding:8px 18px;
-border-radius:20px;
-background:#39c6ff;
-color:#000 !important;
-font-weight:600;
-font-size:14px
-}
+<section class="hero">    
+<h1>Global AI Automation for Businesses</h1>    
+<p>We build AI Automation, Chatbots & Business AI Systems worldwide.</p>    
+</section>    
 
-.hero{text-align:center;padding:80px 20px}
-.hero h1{font-size:42px;margin-bottom:15px}
-.hero p{color:#bbb;font-size:18px}
+<div id="botIcon">🤖</div>    
 
-.section{padding:60px 20px;text-align:center}
-.section h2{font-size:32px;margin-bottom:40px}
+<div id="chatBox">    
+<div id="chatHeader">Innovator AI Assistant</div>    
+<div id="chatMessages">    
+<div class="msg bot">Hi 👋 I am Innovator AI Assistant.</div>    
+</div>    
+<div id="chatInput">    
+<input id="userText" placeholder="Ask about services, pricing or process..." />    
+<button onclick="sendMsg()">Send</button>    
+</div>    
+</div>    
 
-.cards{display:flex;gap:25px;justify-content:center;flex-wrap:wrap}
-.card{
-background:#0b132b;border-radius:16px;
-padding:30px;width:300px;
-box-shadow:0 0 20px rgba(0,255,255,.1)
-}
-.card h3{font-size:22px}
-.price{font-size:40px;color:#39c6ff;margin:15px 0}
-.card p{color:#ccc;margin:6px 0}
+<script>    
+const botIcon=document.getElementById("botIcon");    
+const chatBox=document.getElementById("chatBox");    
+botIcon.onclick=()=>{chatBox.style.display=chatBox.style.display==="flex"?"none":"flex"};    
 
-footer{text-align:center;padding:30px 15px;color:#aaa;font-size:14px}
+async function sendMsg(){    
+let input=document.getElementById("userText");    
+let text=input.value.trim();    
+if(!text)return;    
 
-#botIcon{
-position:fixed;bottom:20px;right:20px;
-width:60px;height:60px;border-radius:50%;
-background:#39c6ff;display:flex;
-justify-content:center;align-items:center;
-font-size:30px;cursor:pointer;z-index:999
-}
-#chatBox{
-position:fixed;bottom:90px;right:20px;
-width:320px;max-height:420px;
-background:#0b132b;border-radius:14px;
-display:none;flex-direction:column;
-overflow:hidden;z-index:999
-}
-#chatHeader{background:#39c6ff;color:#000;padding:12px;font-weight:bold}
-#chatMessages{flex:1;padding:10px;overflow-y:auto;font-size:14px}
-.msg{margin-bottom:8px}
-.user{color:#39c6ff}
-.bot{color:#fff}
-#chatInput{display:flex;border-top:1px solid #222}
-#chatInput input{flex:1;padding:10px;border:none;outline:none}
-#chatInput button{padding:10px 15px;border:none;background:#39c6ff;cursor:pointer}
-</style>
-</head>
+let chat=document.getElementById("chatMessages");    
+chat.innerHTML+=`<div class="msg user">You: ${text}</div>`;    
+input.value="";    
 
-<body>
+try{    
+let res=await fetch("https://innovatorai2025.app.n8n.cloud/webhook/b40420c1-d090-4151-b034-20eb96b60006",{    
+method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:text})    
+});    
+let data=await res.json();    
+let reply=data.reply||data.output||"Jarvis is thinking...";    
+chat.innerHTML+=`<div class="msg bot">${reply}</div>`;    
+}catch(e){    
+chat.innerHTML+=`<div class="msg bot">⚠️ Jarvis temporarily unavailable.</div>`    
+}    
+}    
+</script>    
 
-<header>
-<div class="logo">Innovator AI</div>
-<nav>
-<a href="#pricing">Pricing</a>
-<a href="#contact">Contact</a>
-<a href="#pricing" class="cta-btn">Get Started</a>
-</nav>
-</header>
-
-<section class="hero">
-<h1>Global AI Automation for Businesses</h1>
-<p>We build AI Automation, Chatbots & Business AI Systems worldwide.</p>
-</section>
-
-<div id="botIcon">🤖</div>
-
-<div id="chatBox">
-<div id="chatHeader">Innovator AI Assistant</div>
-<div id="chatMessages">
-<div class="msg bot">Hi 👋 I am Innovator AI Assistant.</div>
-</div>
-<div id="chatInput">
-<input id="userText" placeholder="Ask about services, pricing or process..." />
-<button onclick="sendMsg()">Send</button>
-</div>
-</div>
-
-<script>
-const botIcon = document.getElementById("botIcon");
-const chatBox = document.getElementById("chatBox");
-
-botIcon.onclick = () => {
-chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
-};
-
-async function sendMsg(){
-const input = document.getElementById("userText");
-const text = input.value.trim();
-if(!text) return;
-
-const chat = document.getElementById("chatMessages");
-chat.innerHTML += `<div class="msg user">You: ${text}</div>`;
-input.value = "";
-chat.scrollTop = chat.scrollHeight;
-
-try{
-const res = await fetch(
-"https://innovatorai2025.app.n8n.cloud/webhook/b40420c1-d090-4151-b034-20eb96b60006",
-{
-method:"POST",
-headers:{ "Content-Type":"application/json" },
-body: JSON.stringify({ text: text })
-}
-);
-
-const data = await res.json();
-const reply = data.text || "Jarvis is thinking...";
-
-chat.innerHTML += `<div class="msg bot">${reply}</div>`;
-chat.scrollTop = chat.scrollHeight;
-
-}catch(err){
-chat.innerHTML += `<div class="msg bot">⚠️ Jarvis temporarily unavailable.</div>`;
-}
-}
-</script>
-
-</body>
+</body>    
 </html>
