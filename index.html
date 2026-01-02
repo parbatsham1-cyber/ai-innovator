@@ -123,6 +123,7 @@ z-index:999
 <section class="hero">
 <h1>Global AI Automation for Businesses</h1>
 <p>We build AI Automation, Chatbots & Business AI Systems worldwide.</p>
+
 <div class="contact-info">
 📞 WhatsApp: <a href="https://wa.me/917507253658">+91 75072 53658</a><br>
 📧 Email: <a href="mailto:innovatorai0@gmail.com">innovatorai0@gmail.com</a>
@@ -235,6 +236,7 @@ body: JSON.stringify({ message: text })
 
 let data = await res.json();
 let reply = data.reply || data.output || "Jarvis is thinking...";
+
 chat.innerHTML += `<div class="msg bot">${reply}</div>`;
 chat.scrollTop = chat.scrollHeight;
 
@@ -245,4 +247,4 @@ chat.innerHTML += `<div class="msg bot">⚠️ Jarvis temporarily unavailable.</
 </script>
 
 </body>
-                                    </html>
+</html>
