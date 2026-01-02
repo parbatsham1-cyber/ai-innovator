@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- ✅ GOOGLE SEARCH CONSOLE VERIFICATION -->
 <meta name="google-site-verification" content="XAyhdUlsNDBhtcsQ8g2AocSxT9Wwx1EQiZHI3BA6Stk" />
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Innovator AI – Global AI Automation</title>
 
 <style>
@@ -53,18 +52,11 @@ box-shadow:0 0 20px rgba(0,255,255,.1)
 .card p{color:#ccc;margin:6px 0}
 .pay-btn{margin-top:15px}
 
-/* GLOBAL */
-.flags{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;font-size:18px}
-
 /* FOOTER */
 footer{text-align:center;padding:30px 15px;color:#aaa;font-size:14px}
 
 /* CONTACT */
-.contact-info{
-margin-top:10px;
-color:#ccc;
-font-size:15px
-}
+.contact-info{margin-top:10px;color:#ccc;font-size:15px}
 .contact-info a{color:#39c6ff;text-decoration:none}
 
 /* BOT ICON */
@@ -72,8 +64,7 @@ font-size:15px
 position:fixed;
 bottom:20px;
 right:20px;
-width:60px;
-height:60px;
+width:60px;height:60px;
 border-radius:50%;
 background:#39c6ff;
 display:flex;
@@ -81,10 +72,10 @@ justify-content:center;
 align-items:center;
 font-size:30px;
 cursor:pointer;
-z-index:999
+z-index:9999
 }
 
-/* CHAT BOX (FIXED) */
+/* ✅ FIXED CHATBOX */
 #chatBox{
 position:fixed;
 bottom:100px;
@@ -96,15 +87,11 @@ border-radius:14px;
 display:none;
 flex-direction:column;
 overflow:hidden;
-z-index:999
+z-index:9999;
+box-shadow:0 10px 30px rgba(0,0,0,.6)
 }
 
-#chatHeader{
-background:#39c6ff;
-color:#000;
-padding:12px;
-font-weight:bold
-}
+#chatHeader{background:#39c6ff;color:#000;padding:12px;font-weight:bold}
 #chatMessages{flex:1;padding:10px;overflow-y:auto;font-size:14px}
 .msg{margin-bottom:8px}
 .user{color:#39c6ff}
@@ -129,7 +116,6 @@ font-weight:bold
 <section class="hero">
 <h1>Global AI Automation for Businesses</h1>
 <p>We build AI Automation, Chatbots & Business AI Systems worldwide.</p>
-
 <div class="contact-info">
 📞 WhatsApp: <a href="https://wa.me/917507253658">+91 75072 53658</a><br>
 📧 Email: <a href="mailto:innovatorai0@gmail.com">innovatorai0@gmail.com</a>
@@ -138,7 +124,6 @@ font-weight:bold
 
 <section id="pricing" class="section">
 <h2>Pricing</h2>
-
 <div class="cards">
 
 <div class="card">
@@ -182,9 +167,7 @@ data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>
 
 <footer id="contact">
 <p>Innovator AI® – AI Automation & Business AI Systems</p>
-<p class="contact-info">
-📞 WhatsApp: +91 75072 53658 | 📧 innovatorai0@gmail.com
-</p>
+<p>📞 WhatsApp: +91 75072 53658 | 📧 innovatorai0@gmail.com</p>
 <p>© 2025 Innovator AI. All Rights Reserved.</p>
 </footer>
 
@@ -219,11 +202,12 @@ chat.scrollTop=chat.scrollHeight;
 try{
 let res=await fetch("https://innovatorai2025.app.n8n.cloud/webhook/b40420c1-d090-4151-b034-20eb96b60006",{
 method:"POST",
-headers:{"Content-Type":"application/json"},
-body:JSON.stringify({text:text})
+headers:{ "Content-Type":"application/json" },
+body:JSON.stringify({ message:text })
 });
 let data=await res.json();
-chat.innerHTML+=`<div class="msg bot">${data.text||"Jarvis is thinking..."}</div>`;
+chat.innerHTML+=`<div class="msg bot">${data.reply||"Jarvis is thinking..."}</div>`;
+chat.scrollTop=chat.scrollHeight;
 }catch(e){
 chat.innerHTML+=`<div class="msg bot">⚠️ Jarvis temporarily unavailable.</div>`;
 }
@@ -231,4 +215,4 @@ chat.innerHTML+=`<div class="msg bot">⚠️ Jarvis temporarily unavailable.</di
 </script>
 
 </body>
-</html>
+                          </html>
