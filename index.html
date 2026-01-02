@@ -1,221 +1,127 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-<meta charset="UTF-8">  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 
-<!-- ✅ GOOGLE SEARCH CONSOLE VERIFICATION -->
+<!-- GOOGLE SEARCH CONSOLE -->
 <meta name="google-site-verification" content="XAyhdUlsNDBhtcsQ8g2AocSxT9Wwx1EQiZHI3BA6Stk" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>Innovator AI – Global AI Automation</title>  
-  
-<style>  
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}  
-body{background:linear-gradient(180deg,#050b1e,#020617);color:#fff}  
-  
-/* HEADER */  
-header{  
-display:flex;justify-content:space-between;align-items:center;  
-padding:20px 40px  
-}  
-.logo{font-size:28px;font-weight:700;color:#39c6ff}  
-nav a{color:#aaa;margin-left:20px;text-decoration:none}  
-nav a:hover{color:#fff}  
-  
-/* CTA */  
-.cta-btn{  
-margin-left:25px;  
-padding:8px 18px;  
-border-radius:20px;  
-background:#39c6ff;  
-color:#000 !important;  
-font-weight:600;  
-font-size:14px  
-}  
-.cta-btn:hover{background:#5ed4ff}  
-  
-/* HERO */  
-.hero{text-align:center;padding:80px 20px}  
-.hero h1{font-size:42px;margin-bottom:15px}  
-.hero p{color:#bbb;font-size:18px}  
-  
-/* PRICING */  
-.section{padding:60px 20px;text-align:center}  
-.section h2{font-size:32px;margin-bottom:40px}  
-.cards{display:flex;gap:25px;justify-content:center;flex-wrap:wrap}  
-.card{  
-background:#0b132b;border-radius:16px;  
-padding:30px;width:300px;  
-box-shadow:0 0 20px rgba(0,255,255,.1)  
-}  
-.card h3{font-size:22px}  
-.price{font-size:40px;color:#39c6ff;margin:15px 0}  
-.card p{color:#ccc;margin:6px 0}  
-.pay-btn{margin-top:15px}  
-  
-/* GLOBAL */  
-.flags{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;font-size:18px}  
-  
-/* FOOTER */  
-footer{text-align:center;padding:30px 15px;color:#aaa;font-size:14px}  
-  
-/* CONTACT */  
-.contact-info{  
-margin-top:10px;  
-color:#ccc;  
-font-size:15px  
-}  
-.contact-info a{color:#39c6ff;text-decoration:none}  
-  
-/* BOT */  
-#botIcon{  
-position:fixed;bottom:20px;right:20px;  
-width:60px;height:60px;border-radius:50%;  
-background:#39c6ff;display:flex;  
-justify-content:center;align-items:center;  
-font-size:30px;cursor:pointer;z-index:999  
-}  
-#chatBox{  
-position:fixed;bottom:90px;right:20px;  
-width:320px;max-height:420px;  
-background:#0b132b;border-radius:14px;  
-display:none;flex-direction:column;  
-overflow:hidden;z-index:999  
-}  
-#chatHeader{background:#39c6ff;color:#000;padding:12px;font-weight:bold}  
-#chatMessages{flex:1;padding:10px;overflow-y:auto;font-size:14px}  
-.msg{margin-bottom:8px}  
-.user{color:#39c6ff}  
-.bot{color:#fff}  
-#chatInput{display:flex;border-top:1px solid #222}  
-#chatInput input{flex:1;padding:10px;border:none;outline:none}  
-#chatInput button{padding:10px 15px;border:none;background:#39c6ff;cursor:pointer}  
-</style>  
-</head>  
-  
-<body>  
-  
-<header>  
-<div class="logo">Innovator AI</div>  
-<nav>  
-<a href="#pricing">Pricing</a>  
-<a href="#contact">Contact</a>  
-<a href="#pricing" class="cta-btn">Get Started</a>  
-</nav>  
-</header>  
-  
-<section class="hero">  
-<h1>Global AI Automation for Businesses</h1>  
-<p>We build AI Automation, Chatbots & Business AI Systems worldwide.</p>  
-  
-<div class="contact-info">  
-📞 WhatsApp: <a href="https://wa.me/917507253658">+91 75072 53658</a> <br>  
-📧 Email: <a href="mailto:innovatorai0@gmail.com">innovatorai0@gmail.com</a>  
-</div>  
-</section>  
-  
-<section id="pricing" class="section">  
-<h2>Pricing</h2>  
-  
-<div class="cards">  
-<div class="card">  
-<h3>Basic</h3>  
-<div class="price">₹999</div>  
-<p>Starter AI Setup</p>  
-<p>Email Support</p>  
-<p>Secure Payment</p>  
-<div class="pay-btn">  
-<form>  
-<script src="https://checkout.razorpay.com/v1/payment-button.js"  
-data-payment_button_id="pl_RtRcZkSR3iCW4z" async></script>  
-</form>  
-</div>  
-</div>  
-  
-<div class="card">  
-<h3>Pro</h3>  
-<div class="price">₹2999</div>  
-<p>Advanced Automation</p>  
-<p>Priority Support</p>  
-<p>Business Integration</p>  
-<div class="pay-btn">  
-<form>  
-<script src="https://checkout.razorpay.com/v1/payment-button.js"  
-data-payment_button_id="pl_RtSH27gmEDoGN7" async></script>  
-</form>  
-</div>  
-</div>  
-  
-<div class="card">  
-<h3>Premium</h3>  
-<div class="price">₹4999</div>  
-<p>Full AI System</p>  
-<p>Dedicated Support</p>  
-<p>Global Deployment</p>  
-<div class="pay-btn">  
-<form>  
-<script src="https://checkout.razorpay.com/v1/payment-button.js"  
-data-payment_button_id="pl_RtSNu3CiCHZ4mt" async></script>  
-</form>  
-</div>  
-</div>  
-</div>  
-</section>  
-  
-<section class="section">  
-<h2>🌍 Serving Clients Worldwide</h2>  
-<div class="flags">  
-🇮🇳 India 🇺🇸 USA 🇬🇧 UK 🇦🇪 UAE 🇨🇦 Canada 🇦🇺 Australia  
-</div>  
-</section>  
-  
-<footer id="contact">  
-<p>Innovator AI® – AI Automation & Business AI Systems</p>  
-<p class="contact-info">  
-📞 WhatsApp: +91 75072 53658 | 📧 innovatorai0@gmail.com  
-</p>  
-<p>Serving clients globally | 🔒 Secure payments via Razorpay</p>  
-<p>© 2025 Innovator AI. All Rights Reserved.</p>  
-</footer>  
-  
-<div id="botIcon">🤖</div>  
-  
-<div id="chatBox">  
-<div id="chatHeader">Innovator AI Assistant</div>  
-<div id="chatMessages">  
-<div class="msg bot">  
-Hi 👋 I am Innovator AI Assistant.  
-</div>  
-</div>  
-<div id="chatInput">  
-<input id="userText" placeholder="Ask about services, pricing or process..." />  
-<button onclick="sendMsg()">Send</button>  
-</div>  
-</div>  
-  
-<script>  
-const botIcon=document.getElementById("botIcon");  
-const chatBox=document.getElementById("chatBox");  
-botIcon.onclick=()=>chatBox.style.display=  
-chatBox.style.display==="flex"?"none":"flex";  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovator AI – Global AI Automation</title>
 
-function sendMsg(){  
-let input=document.getElementById("userText");  
-let text=input.value.trim().toLowerCase();  
-if(!text)return;  
-let chat=document.getElementById("chatMessages");  
-chat.innerHTML+=`<div class="msg user">You: ${text}</div>`;  
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:linear-gradient(180deg,#050b1e,#020617);color:#fff}
 
-let reply="We provide AI automation services for businesses.";  
-if(text.includes("service")) reply="Our services include AI automation and chatbots.";  
-else if(text.includes("price")) reply="Plans: ₹999, ₹2999, ₹4999.";  
-else if(text.includes("contact")) reply="WhatsApp +91 75072 53658";  
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px}
+.logo{font-size:28px;font-weight:700;color:#39c6ff}
+nav a{color:#aaa;margin-left:20px;text-decoration:none}
+nav a:hover{color:#fff}
+.cta-btn{margin-left:25px;padding:8px 18px;border-radius:20px;background:#39c6ff;color:#000!important;font-weight:600}
 
-chat.innerHTML+=`<div class="msg bot">${reply}</div>`;  
-input.value="";  
-chat.scrollTop=chat.scrollHeight;  
-}  
-</script>  
-  
-</body>  
+.hero{text-align:center;padding:80px 20px}
+.hero h1{font-size:42px;margin-bottom:15px}
+.hero p{color:#bbb;font-size:18px}
+
+.section{padding:60px 20px;text-align:center}
+.section h2{font-size:32px;margin-bottom:40px}
+.cards{display:flex;gap:25px;justify-content:center;flex-wrap:wrap}
+.card{background:#0b132b;border-radius:16px;padding:30px;width:300px}
+.price{font-size:40px;color:#39c6ff;margin:15px 0}
+
+footer{text-align:center;padding:30px 15px;color:#aaa;font-size:14px}
+
+.contact-info{margin-top:10px;color:#ccc;font-size:15px}
+.contact-info a{color:#39c6ff;text-decoration:none}
+
+/* BOT */
+#botIcon{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#39c6ff;display:flex;justify-content:center;align-items:center;font-size:30px;cursor:pointer;z-index:999}
+#chatBox{position:fixed;bottom:90px;right:20px;width:320px;max-height:420px;background:#0b132b;border-radius:14px;display:none;flex-direction:column;overflow:hidden;z-index:999}
+#chatHeader{background:#39c6ff;color:#000;padding:12px;font-weight:bold}
+#chatMessages{flex:1;padding:10px;overflow-y:auto;font-size:14px}
+.msg{margin-bottom:8px}
+.user{color:#39c6ff}
+.bot{color:#fff}
+#chatInput{display:flex;border-top:1px solid #222}
+#chatInput input{flex:1;padding:10px;border:none;outline:none}
+#chatInput button{padding:10px 15px;border:none;background:#39c6ff;cursor:pointer}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Innovator AI</div>
+<nav>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+<a href="#pricing" class="cta-btn">Get Started</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Global AI Automation for Businesses</h1>
+<p>We build AI Automation, Chatbots & Business AI Systems worldwide.</p>
+
+<div class="contact-info">
+📞 WhatsApp: <a href="https://wa.me/917507253658">+91 75072 53658</a><br>
+📧 Email: <a href="mailto:innovatorai0@gmail.com">innovatorai0@gmail.com</a>
+</div>
+</section>
+
+<footer id="contact">
+<p>Innovator AI® – AI Automation & Business AI Systems</p>
+<p class="contact-info">📞 +91 75072 53658 | 📧 innovatorai0@gmail.com</p>
+<p>© 2025 Innovator AI. All Rights Reserved.</p>
+</footer>
+
+<!-- BOT -->
+<div id="botIcon">🤖</div>
+
+<div id="chatBox">
+<div id="chatHeader">Innovator AI Assistant</div>
+<div id="chatMessages">
+<div class="msg bot">Hi 👋 I am JARVIS from Innovator AI. How can I help you?</div>
+</div>
+<div id="chatInput">
+<input id="userText" placeholder="Type your message..." />
+<button onclick="sendMsg()">Send</button>
+</div>
+</div>
+
+<script>
+const botIcon = document.getElementById("botIcon");
+const chatBox = document.getElementById("chatBox");
+botIcon.onclick = () => {
+  chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
+};
+
+const WEBHOOK_URL = "https://innovatorai2025.app.n8n.cloud/webhook/b40420c1-d090-4151-b034-20eb96b60006";
+
+async function sendMsg(){
+  const input = document.getElementById("userText");
+  const text = input.value.trim();
+  if(!text) return;
+
+  const chat = document.getElementById("chatMessages");
+  chat.innerHTML += `<div class="msg user">You: ${text}</div>`;
+  input.value = "";
+  chat.scrollTop = chat.scrollHeight;
+
+  try{
+    const res = await fetch(WEBHOOK_URL,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({message:text,source:"website"})
+    });
+    const data = await res.json();
+    chat.innerHTML += `<div class="msg bot">${data.reply || "Thanks! Our team will contact you shortly."}</div>`;
+  }catch(e){
+    chat.innerHTML += `<div class="msg bot">⚠️ Connection issue. Please WhatsApp us.</div>`;
+  }
+  chat.scrollTop = chat.scrollHeight;
+}
+</script>
+
+</body>
 </html>
